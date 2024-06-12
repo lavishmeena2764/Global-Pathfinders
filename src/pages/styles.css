@@ -1,0 +1,16 @@
+.sponsors-marquee[data-astro-cid-shwxrd6l]{
+    display:flex;
+    gap:2.25rem;
+    justify-content:center;
+    align-items:center;
+    border:1px solid red;
+}
+
+.sponsors-marquee[data-astro-cid-shwxrd6l] a[data-astro-cid-shwxrd6l]{
+    opacity:.5;
+    transition:opacity .2s ease
+}
+
+.sponsors-marquee[data-astro-cid-shwxrd6l] a[data-astro-cid-shwxrd6l]:hover{
+    opacity:1
+}
