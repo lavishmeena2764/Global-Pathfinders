@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import './Testimonial.css'; // Custom CSS for additional styling
+import './styles.css'; // Custom CSS for additional styling
 
 const testimonials = [
     { id: 1, photo: 'https://opencodeiiita.github.io/src/images/ManthanSurkar.png', name: 'Naman Tekriwal', designation: 'The Hong Kong University of Science and Technology', testimonial: '“My experience with Global Pathfinders was very holistic and structured, starting from planning my academics and extra-curricular activities to assistance with my personal statement, essays and letter of recommendations. Under Shifali maam’s guidance, you always have a mentor to reach out to and ask all sorts of questions, and she guides you in the best possible direction. I would recommend their excellent services to every student who is looking to secure admission overseas.”', rating: 5 },

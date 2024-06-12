@@ -82,12 +82,19 @@
 .active{
     border:none;
 }
+
+.program-card{
+    height:480px;
+}
 @media screen and (min-width:760px) {
     .divHeight{
         height: 500px;
     }
     .photo{
         width: 50%;
+    }
+    .program-card{
+        height:600px;
     }
 }
 @media screen and (min-width:1024px) {
@@ -96,6 +103,9 @@
     }
     .photo{
         width: 40%;
+    }
+    .program-card{
+        height:480px;
     }
 }
 
