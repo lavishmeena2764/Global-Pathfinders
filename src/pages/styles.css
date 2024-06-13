@@ -1,16 +1,52 @@
-.sponsors-marquee[data-astro-cid-shwxrd6l]{
-    display:flex;
-    gap:2.25rem;
-    justify-content:center;
-    align-items:center;
-    border:1px solid red;
+body{
+    font-family: 'Jost', sans-serif;
+    font-family :system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.headColor{
+    color:#21225F;
+}
+.shape {
+ 
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;
+    height:35vw;
+    width: 35vw;
+  }
+  .bg-cover {
+    /* margin: auto 1vw; */
+      height: 35vw;
+    width: 35vw;
+     background-image: url("../../public/images/enrolled-img3.jpg");
+       -webkit-animation: liquid 7s ease-in-out infinite;
+      animation: liquid 7s ease-in-out infinite;
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background-size:cover;
+    
+  }
+  @keyframes liquid {
+  0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+     
+  }
+  50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    
+  }
+  100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+      
+  }
+    }
 
-.sponsors-marquee[data-astro-cid-shwxrd6l] a[data-astro-cid-shwxrd6l]{
-    opacity:.5;
-    transition:opacity .2s ease
-}
-
-.sponsors-marquee[data-astro-cid-shwxrd6l] a[data-astro-cid-shwxrd6l]:hover{
-    opacity:1
-}
+    @media screen and (max-width:1024px) {
+        .shape{
+            width: 80vw;
+            height: 80vw;
+        }
+        .bg-cover{
+            width: 80vw;
+            height: 80vw;
+        }
+    }

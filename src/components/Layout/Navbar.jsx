@@ -29,7 +29,7 @@ const Navbar = () => {
     const navItems = [
         { id: 1, text: "Home", url: "http://localhost:3000/" },
         { id: 2, text: "About Us", url: "http://localhost:3000/about" },
-        { id: 3, text: "Why Us", url: "http://localhost:3000/why" },
+        { id: 3, text: "Why Us", url: "http://localhost:3000/why-us" },
         { id: 4, text: "Programs", url: "http://localhost:3000/programs" },
         { id: 5, text: "Blogs", url: "http://localhost:3000/blog" },
         { id: 6, text: "Contact Us", url: "http://localhost:3000/contact" },
