@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import Testimonial from '../components/Testimonial';
+import Mentors from '../components/Mentors';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
@@ -16,7 +16,7 @@ const Programs = () => {
                 <Carousel />
             </div>
             <div className="container mx-auto my-24">
-                <Testimonial />
+                <Mentors />
             </div>
             
             <div className="container mx-auto mb-24">

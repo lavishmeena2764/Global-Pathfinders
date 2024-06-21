@@ -4,17 +4,13 @@ import Footer from '../components/Layout/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
+import PageHeader from '../components/Layout/PageHeader';
 
 const Contact = () => {
     return (
         <>
             <Navbar />
-            <div className="relative w-full h-64">
-                <img src={"./images/contact.png"} alt="Description" class="absolute inset-0 w-full h-full object-cover" />
-                <div className="flex bg-gray-800 bg-opacity-80 flex-col justify-center text-center h-full w-full absolute left-0 px-6">
-                    <h1 className="text-white text-4xl font-bold">Contact Us</h1>
-                </div>
-            </div>
+            <PageHeader title='Contact Us' />
             <div className="min-h-screen flex flex-col items-center justify-center p-6 mb-20">
                 {/* <h1 className="text-4xl font-extrabold mb-8 text-center text-gray-800">Contact Us</h1> */}
                 <div className='flex flex-wrap justify-evenly flex-row w-full my-5'>
