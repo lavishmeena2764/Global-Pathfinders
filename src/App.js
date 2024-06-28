@@ -29,7 +29,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/programs' element={<Programs />} />
         <Route path="/blog" element={<Blogs />} />
-        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/blog/:titleHash" element={<Blog />} />
         <Route path='/why-us' element={<WhyUs />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/goals-academic' element={<ProgramsPage title1={title1} programData1={programData1} c1={c1} head1={head1} />} />

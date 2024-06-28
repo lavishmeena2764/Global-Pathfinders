@@ -29,7 +29,8 @@ const Blogs = () => {
       <div className="container p-6 bg-gray-100 min-h-screen">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         {blogs.map((blog) => (
-          <div key={blog.id} className="group bg-white rounded shadow p-4 hover:scale-105 hover:duration-500">
+          <a href={`/blog/${blog.titleHash}`}>
+            <div key={blog.id} className="group bg-white rounded shadow p-4 hover:scale-105 hover:duration-500">
             <img
               src={blog.image}
               alt={blog.title}
@@ -38,6 +39,7 @@ const Blogs = () => {
             <h2 className="text-2xl font-bold text-indigo-900 group-hover:text-blue-700">{blog.title}</h2>
             <p className='text-blue-500 mt-2'>Read More...</p>
           </div>
+          </a>
         ))}
       </div>
     </div>
