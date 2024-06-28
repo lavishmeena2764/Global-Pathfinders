@@ -1,10 +1,9 @@
 .testimonial-slider-container {
     padding: 10px;
-    /* background-color: #f9f9f9; */
 }
 
 .testimonial-slide {
-    padding: 0 10px;
+    padding: 0 20px;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -32,7 +31,7 @@
 
 .quote-icon {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 10px;
     font-size: 2rem;
     color: #ccc;
@@ -76,7 +75,7 @@
     justify-content: center;
 }
 .divHeight{
-    height: 700px;
+    height: 900px;
     padding-top: 30px;
 }
 .active{
@@ -86,6 +85,13 @@
 .program-card{
     height:480px;
 }
+
+.accordion {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
 
 .content{
     height:120vh;
@@ -123,7 +129,7 @@
 
 @media screen and (min-width:1500px) {
     .divHeight{
-        height: 500px;
+        height: 550px;
     }
 }
 

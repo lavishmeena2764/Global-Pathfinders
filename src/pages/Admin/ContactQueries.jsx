@@ -46,7 +46,7 @@ const ContactQueries = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="container p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold mb-4 text-indigo-900">Contact Queries</h1>
       <table className="min-w-full bg-white rounded-lg shadow">
         <thead>

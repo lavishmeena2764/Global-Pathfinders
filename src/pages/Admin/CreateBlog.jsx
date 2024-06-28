@@ -21,6 +21,7 @@ const CreateBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log(formData);
       const res = await fetch('/api/post/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -41,7 +42,7 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto min-h-screen bg-gray-50">
+    <div className="container p-8 max-w-4xl mx-auto min-h-screen bg-gray-50">
       <h1 className="text-center text-4xl my-10 font-semibold text-indigo-900">Create a Post</h1>
       <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-8 sm:flex-row justify-between">

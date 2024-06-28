@@ -17,15 +17,19 @@ import ContactQueries from './pages/Admin/ContactQueries';
 import CreateBlog from './pages/Admin/CreateBlog';
 import CreateEvent from './pages/Admin/CreateEvent';
 import ManageEvents from './pages/Admin/ManageEvents';
+import Blog from './pages/Blog';
+import Home from './pages/Home';
 function App() {
   return (
     <>
       <Routes>
         <Route path='*' element={<Pagenotfound />} />
+        <Route path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
         <Route path='/programs' element={<Programs />} />
         <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:id" element={<Blog />} />
         <Route path='/why-us' element={<WhyUs />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/goals-academic' element={<ProgramsPage title1={title1} programData1={programData1} c1={c1} head1={head1} />} />

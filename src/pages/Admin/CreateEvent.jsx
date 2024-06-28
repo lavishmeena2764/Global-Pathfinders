@@ -29,7 +29,7 @@ const CreateEvent = ({ onCreateEvent }) => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="container flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white p-8 rounded shadow-md w-full max-w-lg">
                 <h2 className="text-2xl font-bold mb-6 text-center">Create Event</h2>
                 <form onSubmit={handleSubmit}>

@@ -10,8 +10,8 @@ import BlogC from '../components/BlogC';
 
 
 const ProgramCard = ({ title, content, image }) => (
-  <div className="p-6 bg-white rounded-lg shadow-lg m-4 flex flex-center flex-col md:flex-row md:items-start flex-wrap">
-    <FontAwesomeIcon icon={faCircleCheck} size='2xl' className='w-16 text-blue-500 h-16 object-cover rounded-full mr-4' />
+  <div className="p-6 bg-white rounded-lg shadow-lg m-4 flex flex-center flex-col md:flex-row md:items-start ">
+    <FontAwesomeIcon icon={faCircleCheck} size='xl' className='w-16 text-blue-500 h-16 object-cover rounded-full mr-4' />
     <div>
       <h3 className="text-2xl font-bold mb-2 text-indigo-900">{title}</h3>
       <ul className='list-disc'>

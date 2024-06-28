@@ -55,7 +55,7 @@ const Mentors = () => {
                     <div key={index} className={`testimonial-slide ${index === 1 ? 'active' : ''}`}>
                         <div
                             id={`testimonial-${mentor.id}`}
-                            className={`testimonial-card divHeight ${index === 1 ? 'active' : ''}`}
+                            className={`testimonial-card divHeight p-5 ${index === 1 ? 'active' : ''}`}
                         >
                             <div className="photo-container flex justify-center">
                                 <img src={mentor.img} alt={mentor.name} className="photo" />

@@ -12,11 +12,11 @@ const Testimonials = () => {
         <>
             <Navbar />
             <PageHeader title="Testimonials" />
-            <div className="container mx-auto p-6">
+            <div className="container mx-auto p-6 md:mb-0 mb-64" >
                 <Testimonial />
-                <Logo />
 
             </div>
+                <Logo />
 
 
             <Footer />
