@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
 import Footer from '../components/Layout/Footer';
-import './styles.css'
+import { useNavigate } from 'react-router-dom';
+import './styles.css';
+
 const Blog = () => {
   return (
     <>
@@ -12,50 +14,24 @@ const Blog = () => {
       <Footer />
     </>
   );
-}
+};
 
 const BlogTemp = () => {
+  const navigate = useNavigate();
   const { titleHash } = useParams();
-  const [otherBlogs, setOtherBlogs] = useState([{
-    id: 1,
-    title: 'Exploring the Mountains',
-    titleHash: 'exporing-the-mountains',
-    image: '/images/1.jpg',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nihil sequi repellendus illo maxime cumque aperiam soluta iste! Nostrum qui quod beatae accusamus, alias quas at aspernatur molestias fugit unde aperiam, velit tempora, asperiores nihil atque id reiciendis laborum nisi doloremque assumenda aliquam. Reprehenderit eos dolorum tempore illum nemo perspiciatis quam totam, eum ullam velit officia doloremque aspernatur? Cupiditate similique praesentium, harum pariatur ullam quas totam exercitationem voluptatem eum repudiandae inventore labore beatae quasi non tempora, corporis ad vero autem modi? Rerum nulla corporis quibusdam. Nobis harum facilis ad odit. Laudantium accusamus sequi dolore magnam, dolores id ducimus blanditiis velit veritatis! Beatae rerum laborum minima, quo ducimus necessitatibus eos, exercitationem temporibus, totam fugiat sapiente quia accusamus consequuntur eveniet ullam quis molestiae quas illo quos suscipit sunt. Eius nisi, eaque molestias libero minima non saepe. Qui eaque dolor, voluptate hic ducimus tempora in quam inventore deleniti illum voluptatibus impedit eos necessitatibus neque a. Cupiditate nobis similique, error temporibus fuga dicta quis itaque nesciunt odio ea qui vitae saepe dignissimos placeat aspernatur nisi quae maiores quo eum magni distinctio ad accusamus iusto maxime! Vero obcaecati veniam, deserunt minima beatae sit, dolorum, hic non cumque natus excepturi. Consequuntur sit, natus exercitationem, cupiditate maxime facere nam totam corrupti explicabo autem nisi, voluptatum voluptatibus repudiandae dolorum voluptates! Illum aliquam ipsum eius temporibus non quasi voluptatem dicta vitae, cum a nostrum eveniet! Quibusdam natus beatae fuga quasi, labore enim sint ducimus autem eveniet quas provident? Nisi velit aut soluta hic laudantium, odit numquam id enim ratione incidunt impedit nostrum totam magnam ullam quas! Vel nobis quo eaque quibusdam velit perferendis aliquam ea voluptates recusandae animi quidem totam, ex accusamus magnam necessitatibus eum laborum, labore laboriosam repudiandae optio vitae impedit! Non, sapiente error incidunt quia fuga quos hic. Veritatis unde, vitae quis ullam sunt corrupti nobis iste maiores rem laboriosam rerum magnam quod voluptate suscipit inventore ea eos error omnis ipsa soluta praesentium enim nam. Saepe necessitatibus, fuga deserunt dicta quasi quos rerum tempora perferendis possimus rem quibusdam, eaque ad vero modi sint minima accusantium cum sunt numquam? Velit omnis dolore vitae quos ipsam sunt natus illo. Expedita molestias adipisci asperiores nihil numquam similique accusamus pariatur iste dolorem nisi, officia ullam porro, inventore temporibus. Aliquam, earum iste harum vel vero nulla quaerat voluptas inventore reiciendis consectetur? Architecto mollitia explicabo veniam aut vitae quaerat aspernatur est et consequatur perferendis quos minus dolorum culpa facere eveniet, officia excepturi ipsam delectus totam molestiae debitis unde? Modi dolores ea exercitationem porro sunt architecto, doloremque autem tenetur voluptatem voluptate quis nesciunt quidem cum, numquam nisi soluta ut quisquam corporis assumenda nostrum. Tempore, tempora ipsa modi hic quis minus doloremque eaque exercitationem ipsum et natus suscipit eius neque sint amet maxime vero ea quod quia quos. Nam provident impedit quis vero, totam quos facilis delectus reprehenderit! Quis reiciendis delectus voluptates doloribus amet, et ab, temporibus quaerat placeat quidem ex eligendi repudiandae accusamus, incidunt tempora itaque. Nihil est eum enim, temporibus dolore et explicabo excepturi quidem? Excepturi perspiciatis adipisci accusantium consequuntur voluptatem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, odio! Rem deleniti cupiditate eos tenetur, fugit inventore accusantium expedita, saepe similique laborum labore sed alias consequatur necessitatibus. Numquam, natus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-  }, {
-    id: 2,
-    title: 'Exploring the Mountains',
-    titleHash: 'exploring-the-mountains',
-    image: '/images/1.jpg',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nihil sequi repellendus illo maxime cumque aperiam soluta iste! Nostrum qui quod beatae accusamus, alias quas at aspernatur molestias fugit unde aperiam, velit tempora, asperiores nihil atque id reiciendis laborum nisi doloremque assumenda aliquam. Reprehenderit eos dolorum tempore illum nemo perspiciatis quam totam, eum ullam velit officia doloremque aspernatur? Cupiditate similique praesentium, harum pariatur ullam quas totam exercitationem voluptatem eum repudiandae inventore labore beatae quasi non tempora, corporis ad vero autem modi? Rerum nulla corporis quibusdam. Nobis harum facilis ad odit. Laudantium accusamus sequi dolore magnam, dolores id ducimus blanditiis velit veritatis! Beatae rerum laborum minima, quo ducimus necessitatibus eos, exercitationem temporibus, totam fugiat sapiente quia accusamus consequuntur eveniet ullam quis molestiae quas illo quos suscipit sunt. Eius nisi, eaque molestias libero minima non saepe. Qui eaque dolor, voluptate hic ducimus tempora in quam inventore deleniti illum voluptatibus impedit eos necessitatibus neque a. Cupiditate nobis similique, error temporibus fuga dicta quis itaque nesciunt odio ea qui vitae saepe dignissimos placeat aspernatur nisi quae maiores quo eum magni distinctio ad accusamus iusto maxime! Vero obcaecati veniam, deserunt minima beatae sit, dolorum, hic non cumque natus excepturi. Consequuntur sit, natus exercitationem, cupiditate maxime facere nam totam corrupti explicabo autem nisi, voluptatum voluptatibus repudiandae dolorum voluptates! Illum aliquam ipsum eius temporibus non quasi voluptatem dicta vitae, cum a nostrum eveniet! Quibusdam natus beatae fuga quasi, labore enim sint ducimus autem eveniet quas provident? Nisi velit aut soluta hic laudantium, odit numquam id enim ratione incidunt impedit nostrum totam magnam ullam quas! Vel nobis quo eaque quibusdam velit perferendis aliquam ea voluptates recusandae animi quidem totam, ex accusamus magnam necessitatibus eum laborum, labore laboriosam repudiandae optio vitae impedit! Non, sapiente error incidunt quia fuga quos hic. Veritatis unde, vitae quis ullam sunt corrupti nobis iste maiores rem laboriosam rerum magnam quod voluptate suscipit inventore ea eos error omnis ipsa soluta praesentium enim nam. Saepe necessitatibus, fuga deserunt dicta quasi quos rerum tempora perferendis possimus rem quibusdam, eaque ad vero modi sint minima accusantium cum sunt numquam? Velit omnis dolore vitae quos ipsam sunt natus illo. Expedita molestias adipisci asperiores nihil numquam similique accusamus pariatur iste dolorem nisi, officia ullam porro, inventore temporibus. Aliquam, earum iste harum vel vero nulla quaerat voluptas inventore reiciendis consectetur? Architecto mollitia explicabo veniam aut vitae quaerat aspernatur est et consequatur perferendis quos minus dolorum culpa facere eveniet, officia excepturi ipsam delectus totam molestiae debitis unde? Modi dolores ea exercitationem porro sunt architecto, doloremque autem tenetur voluptatem voluptate quis nesciunt quidem cum, numquam nisi soluta ut quisquam corporis assumenda nostrum. Tempore, tempora ipsa modi hic quis minus doloremque eaque exercitationem ipsum et natus suscipit eius neque sint amet maxime vero ea quod quia quos. Nam provident impedit quis vero, totam quos facilis delectus reprehenderit! Quis reiciendis delectus voluptates doloribus amet, et ab, temporibus quaerat placeat quidem ex eligendi repudiandae accusamus, incidunt tempora itaque. Nihil est eum enim, temporibus dolore et explicabo excepturi quidem? Excepturi perspiciatis adipisci accusantium consequuntur voluptatem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, odio! Rem deleniti cupiditate eos tenetur, fugit inventore accusantium expedita, saepe similique laborum labore sed alias consequatur necessitatibus. Numquam, natus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-  }, {
-    id: 3,
-    title: 'Exploring the Mountains',
-    titleHash: 'exploring-the-mountains',
-    image: '/images/1.jpg',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nihil sequi repellendus illo maxime cumque aperiam soluta iste! Nostrum qui quod beatae accusamus, alias quas at aspernatur molestias fugit unde aperiam, velit tempora, asperiores nihil atque id reiciendis laborum nisi doloremque assumenda aliquam. Reprehenderit eos dolorum tempore illum nemo perspiciatis quam totam, eum ullam velit officia doloremque aspernatur? Cupiditate similique praesentium, harum pariatur ullam quas totam exercitationem voluptatem eum repudiandae inventore labore beatae quasi non tempora, corporis ad vero autem modi? Rerum nulla corporis quibusdam. Nobis harum facilis ad odit. Laudantium accusamus sequi dolore magnam, dolores id ducimus blanditiis velit veritatis! Beatae rerum laborum minima, quo ducimus necessitatibus eos, exercitationem temporibus, totam fugiat sapiente quia accusamus consequuntur eveniet ullam quis molestiae quas illo quos suscipit sunt. Eius nisi, eaque molestias libero minima non saepe. Qui eaque dolor, voluptate hic ducimus tempora in quam inventore deleniti illum voluptatibus impedit eos necessitatibus neque a. Cupiditate nobis similique, error temporibus fuga dicta quis itaque nesciunt odio ea qui vitae saepe dignissimos placeat aspernatur nisi quae maiores quo eum magni distinctio ad accusamus iusto maxime! Vero obcaecati veniam, deserunt minima beatae sit, dolorum, hic non cumque natus excepturi. Consequuntur sit, natus exercitationem, cupiditate maxime facere nam totam corrupti explicabo autem nisi, voluptatum voluptatibus repudiandae dolorum voluptates! Illum aliquam ipsum eius temporibus non quasi voluptatem dicta vitae, cum a nostrum eveniet! Quibusdam natus beatae fuga quasi, labore enim sint ducimus autem eveniet quas provident? Nisi velit aut soluta hic laudantium, odit numquam id enim ratione incidunt impedit nostrum totam magnam ullam quas! Vel nobis quo eaque quibusdam velit perferendis aliquam ea voluptates recusandae animi quidem totam, ex accusamus magnam necessitatibus eum laborum, labore laboriosam repudiandae optio vitae impedit! Non, sapiente error incidunt quia fuga quos hic. Veritatis unde, vitae quis ullam sunt corrupti nobis iste maiores rem laboriosam rerum magnam quod voluptate suscipit inventore ea eos error omnis ipsa soluta praesentium enim nam. Saepe necessitatibus, fuga deserunt dicta quasi quos rerum tempora perferendis possimus rem quibusdam, eaque ad vero modi sint minima accusantium cum sunt numquam? Velit omnis dolore vitae quos ipsam sunt natus illo. Expedita molestias adipisci asperiores nihil numquam similique accusamus pariatur iste dolorem nisi, officia ullam porro, inventore temporibus. Aliquam, earum iste harum vel vero nulla quaerat voluptas inventore reiciendis consectetur? Architecto mollitia explicabo veniam aut vitae quaerat aspernatur est et consequatur perferendis quos minus dolorum culpa facere eveniet, officia excepturi ipsam delectus totam molestiae debitis unde? Modi dolores ea exercitationem porro sunt architecto, doloremque autem tenetur voluptatem voluptate quis nesciunt quidem cum, numquam nisi soluta ut quisquam corporis assumenda nostrum. Tempore, tempora ipsa modi hic quis minus doloremque eaque exercitationem ipsum et natus suscipit eius neque sint amet maxime vero ea quod quia quos. Nam provident impedit quis vero, totam quos facilis delectus reprehenderit! Quis reiciendis delectus voluptates doloribus amet, et ab, temporibus quaerat placeat quidem ex eligendi repudiandae accusamus, incidunt tempora itaque. Nihil est eum enim, temporibus dolore et explicabo excepturi quidem? Excepturi perspiciatis adipisci accusantium consequuntur voluptatem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, odio! Rem deleniti cupiditate eos tenetur, fugit inventore accusantium expedita, saepe similique laborum labore sed alias consequatur necessitatibus. Numquam, natus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-  }, {
-    id: 4,
-    title: 'Exploring the Mountains',
-    titleHash: 'exploring-the-mountains',
-    image: '/images/1.jpg',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nihil sequi repellendus illo maxime cumque aperiam soluta iste! Nostrum qui quod beatae accusamus, alias quas at aspernatur molestias fugit unde aperiam, velit tempora, asperiores nihil atque id reiciendis laborum nisi doloremque assumenda aliquam. Reprehenderit eos dolorum tempore illum nemo perspiciatis quam totam, eum ullam velit officia doloremque aspernatur? Cupiditate similique praesentium, harum pariatur ullam quas totam exercitationem voluptatem eum repudiandae inventore labore beatae quasi non tempora, corporis ad vero autem modi? Rerum nulla corporis quibusdam. Nobis harum facilis ad odit. Laudantium accusamus sequi dolore magnam, dolores id ducimus blanditiis velit veritatis! Beatae rerum laborum minima, quo ducimus necessitatibus eos, exercitationem temporibus, totam fugiat sapiente quia accusamus consequuntur eveniet ullam quis molestiae quas illo quos suscipit sunt. Eius nisi, eaque molestias libero minima non saepe. Qui eaque dolor, voluptate hic ducimus tempora in quam inventore deleniti illum voluptatibus impedit eos necessitatibus neque a. Cupiditate nobis similique, error temporibus fuga dicta quis itaque nesciunt odio ea qui vitae saepe dignissimos placeat aspernatur nisi quae maiores quo eum magni distinctio ad accusamus iusto maxime! Vero obcaecati veniam, deserunt minima beatae sit, dolorum, hic non cumque natus excepturi. Consequuntur sit, natus exercitationem, cupiditate maxime facere nam totam corrupti explicabo autem nisi, voluptatum voluptatibus repudiandae dolorum voluptates! Illum aliquam ipsum eius temporibus non quasi voluptatem dicta vitae, cum a nostrum eveniet! Quibusdam natus beatae fuga quasi, labore enim sint ducimus autem eveniet quas provident? Nisi velit aut soluta hic laudantium, odit numquam id enim ratione incidunt impedit nostrum totam magnam ullam quas! Vel nobis quo eaque quibusdam velit perferendis aliquam ea voluptates recusandae animi quidem totam, ex accusamus magnam necessitatibus eum laborum, labore laboriosam repudiandae optio vitae impedit! Non, sapiente error incidunt quia fuga quos hic. Veritatis unde, vitae quis ullam sunt corrupti nobis iste maiores rem laboriosam rerum magnam quod voluptate suscipit inventore ea eos error omnis ipsa soluta praesentium enim nam. Saepe necessitatibus, fuga deserunt dicta quasi quos rerum tempora perferendis possimus rem quibusdam, eaque ad vero modi sint minima accusantium cum sunt numquam? Velit omnis dolore vitae quos ipsam sunt natus illo. Expedita molestias adipisci asperiores nihil numquam similique accusamus pariatur iste dolorem nisi, officia ullam porro, inventore temporibus. Aliquam, earum iste harum vel vero nulla quaerat voluptas inventore reiciendis consectetur? Architecto mollitia explicabo veniam aut vitae quaerat aspernatur est et consequatur perferendis quos minus dolorum culpa facere eveniet, officia excepturi ipsam delectus totam molestiae debitis unde? Modi dolores ea exercitationem porro sunt architecto, doloremque autem tenetur voluptatem voluptate quis nesciunt quidem cum, numquam nisi soluta ut quisquam corporis assumenda nostrum. Tempore, tempora ipsa modi hic quis minus doloremque eaque exercitationem ipsum et natus suscipit eius neque sint amet maxime vero ea quod quia quos. Nam provident impedit quis vero, totam quos facilis delectus reprehenderit! Quis reiciendis delectus voluptates doloribus amet, et ab, temporibus quaerat placeat quidem ex eligendi repudiandae accusamus, incidunt tempora itaque. Nihil est eum enim, temporibus dolore et explicabo excepturi quidem? Excepturi perspiciatis adipisci accusantium consequuntur voluptatem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, odio! Rem deleniti cupiditate eos tenetur, fugit inventore accusantium expedita, saepe similique laborum labore sed alias consequatur necessitatibus. Numquam, natus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-  }]);
-  // setOtherBlogs(otherBlogs.slice(0,5));
-  const [blog, setBlog] = useState({
-    id: 1,
-    title: 'Exploring the Mountains',
-    titleHash: 'exploring-the-mountains',
-    image: '/images/1.jpg',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nihil sequi repellendus illo maxime cumque aperiam soluta iste! Nostrum qui quod beatae accusamus, alias quas at aspernatur molestias fugit unde aperiam, velit tempora, asperiores nihil atque id reiciendis laborum nisi doloremque assumenda aliquam. Reprehenderit eos dolorum tempore illum nemo perspiciatis quam totam, eum ullam velit officia doloremque aspernatur? Cupiditate similique praesentium, harum pariatur ullam quas totam exercitationem voluptatem eum repudiandae inventore labore beatae quasi non tempora, corporis ad vero autem modi? Rerum nulla corporis quibusdam. Nobis harum facilis ad odit. Laudantium accusamus sequi dolore magnam, dolores id ducimus blanditiis velit veritatis! Beatae rerum laborum minima, quo ducimus necessitatibus eos, exercitationem temporibus, totam fugiat sapiente quia accusamus consequuntur eveniet ullam quis molestiae quas illo quos suscipit sunt. Eius nisi, eaque molestias libero minima non saepe. Qui eaque dolor, voluptate hic ducimus tempora in quam inventore deleniti illum voluptatibus impedit eos necessitatibus neque a. Cupiditate nobis similique, error temporibus fuga dicta quis itaque nesciunt odio ea qui vitae saepe dignissimos placeat aspernatur nisi quae maiores quo eum magni distinctio ad accusamus iusto maxime! Vero obcaecati veniam, deserunt minima beatae sit, dolorum, hic non cumque natus excepturi. Consequuntur sit, natus exercitationem, cupiditate maxime facere nam totam corrupti explicabo autem nisi, voluptatum voluptatibus repudiandae dolorum voluptates! Illum aliquam ipsum eius temporibus non quasi voluptatem dicta vitae, cum a nostrum eveniet! Quibusdam natus beatae fuga quasi, labore enim sint ducimus autem eveniet quas provident? Nisi velit aut soluta hic laudantium, odit numquam id enim ratione incidunt impedit nostrum totam magnam ullam quas! Vel nobis quo eaque quibusdam velit perferendis aliquam ea voluptates recusandae animi quidem totam, ex accusamus magnam necessitatibus eum laborum, labore laboriosam repudiandae optio vitae impedit! Non, sapiente error incidunt quia fuga quos hic. Veritatis unde, vitae quis ullam sunt corrupti nobis iste maiores rem laboriosam rerum magnam quod voluptate suscipit inventore ea eos error omnis ipsa soluta praesentium enim nam. Saepe necessitatibus, fuga deserunt dicta quasi quos rerum tempora perferendis possimus rem quibusdam, eaque ad vero modi sint minima accusantium cum sunt numquam? Velit omnis dolore vitae quos ipsam sunt natus illo. Expedita molestias adipisci asperiores nihil numquam similique accusamus pariatur iste dolorem nisi, officia ullam porro, inventore temporibus. Aliquam, earum iste harum vel vero nulla quaerat voluptas inventore reiciendis consectetur? Architecto mollitia explicabo veniam aut vitae quaerat aspernatur est et consequatur perferendis quos minus dolorum culpa facere eveniet, officia excepturi ipsam delectus totam molestiae debitis unde? Modi dolores ea exercitationem porro sunt architecto, doloremque autem tenetur voluptatem voluptate quis nesciunt quidem cum, numquam nisi soluta ut quisquam corporis assumenda nostrum. Tempore, tempora ipsa modi hic quis minus doloremque eaque exercitationem ipsum et natus suscipit eius neque sint amet maxime vero ea quod quia quos. Nam provident impedit quis vero, totam quos facilis delectus reprehenderit! Quis reiciendis delectus voluptates doloribus amet, et ab, temporibus quaerat placeat quidem ex eligendi repudiandae accusamus, incidunt tempora itaque. Nihil est eum enim, temporibus dolore et explicabo excepturi quidem? Excepturi perspiciatis adipisci accusantium consequuntur voluptatem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, odio! Rem deleniti cupiditate eos tenetur, fugit inventore accusantium expedita, saepe similique laborum labore sed alias consequatur necessitatibus. Numquam, natus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-  });
+  const [otherBlogs, setOtherBlogs] = useState([]);
+  const [blog, setBlog] = useState({});
+
   useEffect(() => {
     // Function to fetch a specific blog by titleHash
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`https://your-backend-url.com/api/blogs/${titleHash}`);
+        const response = await fetch(`http://localhost:4000/blog/${titleHash}`);
         const data = await response.json();
-        setBlog(data);
+        if (data.data.length === 0) {
+          return navigate('/page-not-found');
+        }
+        setBlog(data.data[0]);
       } catch (error) {
         console.error("Error fetching the blog:", error);
       }
@@ -64,11 +40,11 @@ const BlogTemp = () => {
     // Function to fetch all blogs for the Latest Blogs section
     const fetchAllBlogs = async () => {
       try {
-        const response = await fetch('https://your-backend-url.com/api/blogs');
+        const response = await fetch('http://localhost:4000/blog');
         const data = await response.json();
         // Filter out the current blog from the latest blogs
-        const filteredBlogs = data.filter(blog => blog.titleHash !== titleHash);
-        setOtherBlogs(filteredBlogs.slice(0, 5));
+        const filteredBlogs = data.data.filter(blog => blog.titleHash !== titleHash);
+        setOtherBlogs(filteredBlogs.slice(0, 7));
       } catch (error) {
         console.error("Error fetching the blogs:", error);
       }
@@ -76,30 +52,32 @@ const BlogTemp = () => {
 
     fetchBlog();
     fetchAllBlogs();
-  }, [titleHash]);
+  }, [titleHash, navigate]);
 
-  if (!blog) return <div className='text-2xl m-8 h-64'>Loading...</div>;
+  if (!blog.title) return <div className='text-2xl m-8 h-64'>Loading...</div>;
 
   return (
     <>
       <PageHeader title={`Blog : ${blog.title}`} />
       <div className="flex flex-col lg:flex-row p-6 bg-gray-100 min-h-screen">
-        <div className="w-full lg:w-3/4 p-36">
-          <h1 className="text-4xl font-bold mb-4 text-indigo-900">{blog.title}</h1>
-          <img src={blog.image} alt={blog.title} className="h-64 object-cover rounded mb-4" />
-          <p className="text-gray-700 mb-4" dangerouslySetInnerHTML={{ __html: blog.content }}></p>
+        <div className="w-full lg:w-2/3 p-6">
+          <img src={blog.img} alt={blog.title} className="w-full ml-3 object-cover rounded mb-4" />
+          <h1 className="text-4xl font-bold ml-2 mb-4 text-indigo-900">{blog.title}</h1>
+          <div><div className="text-gray-700 mb-4 ql-editor" dangerouslySetInnerHTML={{ __html: blog.body }}></div></div>
           <button className="px-4 py-2 text-lg bg-blue-500 text-white rounded hover:bg-blue-700">Consult Now</button>
         </div>
-        <div className="w-full lg:w-1/4 lg:ml-6 bg-white rounded shadow p-4 border border-gray-300 h-screen sticky top-0">
+        <div className="w-full lg:w-1/3 lg:ml-6 bg-white rounded shadow p-4 border border-gray-300 h-fit sticky top-0">
+          <div className='mx-12'>
           <h2 className="text-2xl font-bold mb-2 text-indigo-900">Latest Blogs</h2>
           {otherBlogs.map(blog => (
-            <div key={blog.titleHash} className="mb-4">
-                <a href={`/blog/${blog.titleHash}`}>
-                <img src={blog.image} alt={blog.title} className="w-full h-32 object-cover rounded mb-2" />
+            <div key={blog.titleHash} className="mb-2">
+              <a href={`/blog/${blog.titleHash}`}>
+                <img src={blog.img} alt={blog.title} className="w-full h-32 object-cover rounded mb-2" />
                 <h3 className="text-lg font-bold text-indigo-700">{blog.title}</h3>
-            </a>
-              </div>
+              </a>
+            </div>
           ))}
+          </div>
         </div>
       </div>
     </>

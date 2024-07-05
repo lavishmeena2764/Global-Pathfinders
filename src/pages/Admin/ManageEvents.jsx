@@ -1,36 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
-import event from '../../data/event';
+// import event from '../../data/event';
 import { Button } from 'flowbite-react';
 
 const ManageEvents = () => {
-  const [events, setEvents] = useState(event);
+  const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [inputPage, setInputPage] = useState(1);
   const eventsPerPage = 5;
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [editEvent, setEditEvent] = useState({ id: null, title: '', description: '', link: '' });
+  const [editEvent, setEditEvent] = useState({ _id: null, title: '', caption: '', link: '', date: '', time: '', venue: '' });
 
   useEffect(() => {
+    // Simulate fetching data from the backend
+    const fetchEvents = async () => {
+      const response = await fetch(`http://localhost:4000/event`);
+      const data = await response.json();
+      console.log(data.data);
+      setEvents(data.data);
+    };
+
     fetchEvents();
   }, []);
-
-  const fetchEvents = async () => {
-    try {
-      const res = await axios.get('/api/events');
-      setEvents(res.data);
-    } catch (error) {
-      console.error('Error fetching events:', error);
-    }
-  };
 
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this event?');
     if (confirmDelete) {
       try {
-        await axios.delete(`/api/events/${id}`);
+        await axios.delete(`http://localhost:4000/event/${id}`);
         setEvents(events.filter((event) => event.id !== id));
+        window.location.reload();
       } catch (error) {
         console.error('Error deleting event:', error);
       }
@@ -44,10 +44,14 @@ const ManageEvents = () => {
 
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`/api/events/${editEvent.id}`, editEvent);
+      // console.log(`http://localhost:4000/event/${editEvent._id}`, editEvent)
+      const res = await axios.put(`http://localhost:4000/event/update/${editEvent._id}`, editEvent);
       const updatedEvent = res.data;
-      setEvents(events.map((event) => (event.id === updatedEvent.id ? updatedEvent : event)));
+      // console.log("updated event",res.data)
+      setEvents(events.map((event) => (event._id === updatedEvent._id ? updatedEvent : event)));
       setModalIsOpen(false);
+      window.location.reload();
+      
     } catch (error) {
       console.error('Error updating event:', error);
     }
@@ -82,25 +86,25 @@ const ManageEvents = () => {
     const { name, value } = e.target;
     setEditEvent({ ...editEvent, [name]: value });
   };
+
   return (
     <div className="container p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold mb-4 text-indigo-900">Manage Events</h1>
       <ul className="space-y-4">
         {currentEvents.map((event) => (
-          <li key={event.id} className="p-4 bg-white rounded shadow flex justify-between items-center">
+          <li key={event._id} className="p-4 bg-white rounded shadow flex justify-between items-center">
             <img
-              src={`https://example.com/${event.image}`}
+              src={event.img}
               alt=""
-              className="w-16 h-16 mr-4 rounded"
+              className="h-16 mr-4 rounded"
             />
             <div className="flex-1">
               <a href={`/event/${event.id}`} className="text-xl font-bold text-indigo-700">
                 {event.title}
               </a>
-              <p className="text-gray-700 mt-2">{event.description.slice(0, 50)}...</p>
+              <p className="text-gray-700 mt-2 pr-8">{event.caption}</p>
             </div>
             <div>
-
               <button
                 type="button"
                 onClick={() => handleEdit(event)}
@@ -111,7 +115,7 @@ const ManageEvents = () => {
                 Edit
               </button>
               <button
-                onClick={() => handleDelete(event.id)}
+                onClick={() => handleDelete(event._id)}
                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
               >
                 Delete
@@ -154,60 +158,85 @@ const ManageEvents = () => {
           Next
         </button>
       </div>
-    <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h1 className="modal-title text-xl" id="exampleModalLabel"><b>Edit Event</b></h1>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div className="modal-body">
-      <form>
-          <div className="form-group">
-            <label htmlFor="title" className="col-form-label">Title:</label>
+      <Modal
+       className='w-1/2 mx-auto bg-white p-8 px-16 mt-8'
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Edit Event"
+      >
+        <h2 className="text-xl font-bold mb-4">Edit Event</h2>
+        <form>
+          <div className="mb-4">
+            <label htmlFor="title" className="block mb-1 font-semibold">Title:</label>
             <input
               type="text"
-              className="form-control"
+              className="w-full border rounded px-3 py-2"
               id="title"
               name="title"
               value={editEvent.title}
               onChange={handleChange}
             />
           </div>
-          
-          <div className="form-group">
-            <label htmlFor="link" className="col-form-label">Link:</label>
+          <div className="mb-4">
+            <label htmlFor="link" className="block mb-1 font-semibold">Link:</label>
             <input
               type="text"
-              className="form-control"
+              className="w-full border rounded px-3 py-2"
               id="link"
               name="link"
               value={editEvent.link}
               onChange={handleChange}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="desc" className="col-form-label">Description:</label>
+          <div className="mb-4">
+            <label htmlFor="desc" className="block mb-1 font-semibold">Description:</label>
             <textarea
-              className="form-control"
+              className="w-full border rounded px-3 py-2"
               id="desc"
               name="description"
-              value={editEvent.description}
+              value={editEvent.caption}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="date" className="block mb-1 font-semibold">Date:</label>
+            <input
+              type="date"
+              className="w-full border rounded px-3 py-2"
+              id="date"
+              name="date"
+              value={editEvent.date}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="time" className="block mb-1 font-semibold">Time:</label>
+            <input
+              type="time"
+              className="w-full border rounded px-3 py-2"
+              id="time"
+              name="time"
+              value={editEvent.time}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="venue" className="block mb-1 font-semibold">Venue:</label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2"
+              id="venue"
+              name="venue"
+              value={editEvent.venue}
               onChange={handleChange}
             />
           </div>
         </form>
-      </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" onClick={() => setModalIsOpen(false)}>Close</button>
+        <div className="flex justify-end">
+          <button type="button" className="btn btn-secondary mr-2" onClick={() => setModalIsOpen(false)}>Close</button>
           <button type="button" className="btn btn-primary" onClick={handleUpdate}>Save</button>
         </div>
-    </div>
-  </div>
-</div>
-
+      </Modal>
     </div>
   );
 };

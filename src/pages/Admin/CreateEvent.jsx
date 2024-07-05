@@ -4,17 +4,38 @@ import axios from 'axios'; // Import Axios for API calls
 import { Button, FileInput, TextInput } from 'flowbite-react';
 
 const CreateEvent = ({ onCreateEvent }) => {
-    const [formData, setFormData] = useState({ title: '', description: '', image: null, link: '' });
+    const [formData, setFormData] = useState({ 
+        title: '', 
+        caption: '', 
+        image: null, 
+        link: '', 
+        date: '', 
+        time: '', 
+        venue: '' 
+    });
     const [imagePreview, setImagePreview] = useState(null);
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('/api/events', formData);
+            console.log(formData)
+            const { data } = await axios.post('http://localhost:4000/event/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
             onCreateEvent(data); // Update parent component with new event
             setModalIsOpen(false); // Close modal after successful creation
-            setFormData({ title: '', description: '', image: null, link: '' }); // Clear form data
+            setFormData({ 
+                title: '', 
+                caption: '', 
+                image: null, 
+                link: '', 
+                date: '', 
+                time: '', 
+                venue: '' 
+            }); // Clear form data
             setImagePreview(null); // Clear image preview
         } catch (error) {
             console.error('Error creating event:', error);
@@ -42,50 +63,77 @@ const CreateEvent = ({ onCreateEvent }) => {
                         <div className="bg-blue-500 text-white text-center py-2 px-4 rounded cursor-pointer">
                             Choose a file
                         </div>
-                    {imagePreview && (
-                        <div className="mt-4">
-                            <img src={imagePreview} alt="Image Preview" className="w-full h-auto rounded" />
-                        </div>
-                    )}
+                        {imagePreview && (
+                            <div className="mt-4">
+                                <img src={imagePreview} alt="Image Preview" className="w-full h-auto rounded" />
+                            </div>
+                        )}
+                    </div>
+                    <div className="mb-4">
+                        <input
+                            type="text"
+                            placeholder="Title"
+                            value={formData.title}
+                            onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                            required
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <textarea
+                            placeholder="Description"
+                            value={formData.caption}
+                            onChange={(e) => setFormData({ ...formData, caption: e.target.value })}
+                            required
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                        <input
+                            type="date"
+                            placeholder="Date"
+                            value={formData.date}
+                            onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                            required
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                        <input
+                            type="time"
+                            placeholder="Time"
+                            value={formData.time}
+                            onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                            required
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <input
+                            type="text"
+                            placeholder="Venue"
+                            value={formData.venue}
+                            onChange={(e) => setFormData({ ...formData, venue: e.target.value })}
+                            required
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <input
+                            type="url"
+                            placeholder="Link"
+                            value={formData.link}
+                            onChange={(e) => setFormData({ ...formData, link: e.target.value })}
+                            className="w-full p-2 text-lg border rounded"
+                        />
+                    </div>
+                    <div className="flex justify-center">
+                        <Button type="submit" className="btn btn-primary">
+                            Publish
+                        </Button>
+                    </div>
+                </form>
             </div>
-            <div className="mb-4">
-                <input
-                    type="text"
-                    placeholder="Title"
-                    value={formData.title}
-                    onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    required
-                    className="w-full p-2 text-lg border rounded"
-                />
-            </div>
-            <div className="mb-4">
-                <textarea
-                    type="text"
-                    placeholder="Description"
-                    value={formData.description}
-                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    required
-                    className="w-full p-2 text-lg border rounded"
-                />
-            </div>
-            <div className="mb-4">
-                <input
-                    type="url"
-                    placeholder="Link"
-                    value={formData.link}
-                    onChange={(e) => setFormData({ ...formData, link: e.target.value })}
-                    className="w-full p-2 text-lg border rounded"
-                />
-            </div>
-            <div className="flex justify-center">
-                <Button type="submit" className="btn btn-primary">
-                    Publish
-                </Button>
-            </div>
-        </form>
-      </div >
-    </div >
-  );
+        </div>
+    );
 };
 
 export default CreateEvent;

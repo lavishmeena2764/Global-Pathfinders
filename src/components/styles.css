@@ -38,7 +38,7 @@
 }
 
 .photo-container {
-    width: 40%;
+    width: 45%;
     margin-bottom: 20px;
 }
 
@@ -74,16 +74,18 @@
     display: flex;
     justify-content: center;
 }
-.divHeight{
-    height: 900px;
+
+.divHeight {
+    height: 950px;
     padding-top: 30px;
 }
-.active{
-    border:none;
+
+.active {
+    border: none;
 }
 
-.program-card{
-    height:480px;
+.program-card {
+    height: 480px;
 }
 
 .accordion {
@@ -93,56 +95,72 @@
 }
 
 
-.content{
-    height:120vh;
+.content {
+    height: 120vh;
 }
+
 @media screen and (min-width:760px) {
-    .divHeight{
+    .divHeight {
         height: 500px;
     }
-    .photo{
+
+    .photo {
         width: 50%;
     }
-    .program-card{
-        height:600px;
+
+    .program-card {
+        height: 600px;
     }
-    
-    .content{
-        height:40vh;
+
+    .content {
+        height: 40vh;
         margin-top: 5vh;
     }
+
+    
+
 }
+
 @media screen and (min-width:1024px) {
-    .divHeight{
+    .divHeight {
         height: 400px;
     }
-    .photo{
+
+    .photo {
         width: 40%;
     }
-    .program-card{
-        height:480px;
+
+    .program-card {
+        height: 480px;
     }
-    .content{
+
+    .content {
         margin-top: 0;
+    }
+
+    .parallax h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 3rem;
     }
 }
 
 @media screen and (min-width:1500px) {
-    .divHeight{
-        height: 550px;
+    .divHeight {
+        height: 600px;
     }
 }
 
-.gradient{
+.gradient {
     background-image: linear-gradient(to right, #4755690a, #9d0cb28a, #4343c899, #4755690a);
-  width: 50%;
-  height: 0.094rem;
-  position: absolute;
-  content: "";
-  bottom: -0.063rem;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0px 0.125rem 0.75rem #4343c84d;
+    width: 50%;
+    height: 0.094rem;
+    position: absolute;
+    content: "";
+    bottom: -0.063rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0.125rem 0.75rem #4343c84d;
 }
 
 
@@ -167,12 +185,53 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(31, 41, 55, 0.8); /* Adjust the opacity and color as needed */
+    background: rgb(31, 41, 55, 0.8);
+    /* Adjust the opacity and color as needed */
     z-index: 1;
 }
 
 .parallax h1 {
     position: relative;
     z-index: 2;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.caption {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.event-card:hover .caption {
+    white-space: wrap;
+    overflow: visible;
+}
+
+.p-6:hover .caption-hover {
+    display: block;
 }

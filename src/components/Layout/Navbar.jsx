@@ -5,14 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-// import { useNavigate } from 'react-router-dom';
-
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) { // Adjust the value to your needs
+            if (window.scrollY > 100) {
                 setIsSticky(true);
             } else {
                 setIsSticky(false);
@@ -25,51 +24,57 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     const [nav, setNav] = useState(false);
+
     const navItems = [
-        { id: 1, text: "Home", url: "http://localhost:3000/" },
-        { id: 2, text: "About Us", url: "http://localhost:3000/about" },
-        { id: 3, text: "Why Us", url: "http://localhost:3000/why-us" },
-        { id: 4, text: "Programs", url: "http://localhost:3000/programs" },
-        { id: 5, text: "Blogs", url: "http://localhost:3000/blog" },
-        { id: 6, text: "Contact Us", url: "http://localhost:3000/contact" },
+        { id: 1, text: "Home", url: "/" },
+        { id: 2, text: "About Us", url: "/about" },
+        { id: 3, text: "Why Us", url: "/why-us" },
+        { id: 4, text: "Programs", url: "/programs" },
+        { id: 5, text: "Blogs", url: "/blog" },
+        { id: 6, text: "Contact Us", url: "/contact" },
     ];
+
+    const dropdownItems = [
+        { id: 1, text: "Study in USA", url: "/study-in-usa" },
+        { id: 2, text: "Study in Singapore", url: "/study-in-singapore" },
+        { id: 3, text: "Study in UK", url: "/study-in-uk" },
+    ];
+
     const handleNav = () => {
         setNav(!nav);
     };
 
-    // const navigate = useNavigate();
-    // function handleLogout() {
-    //     localStorage.clear("token");
-    //     navigate("/login")
-    // }
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
     return (
         <>
-
             <div className="bg-gray-800 p-4">
                 <nav className="flex justify-center md:justify-between items-center mx-3 flex-wrap">
                     <div className="text-white flex flex-wrap">
-                        <span className="mx-6 text-base"><FontAwesomeIcon icon={faPhone} /> <a href="tel:+91 98916 21469">+91 98916 21469</a></span>
-                        <span className='ml-6 text-base'><FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:admin@globalpathfinders.co.in">
+                        <span className="mx-6 text-base"><FontAwesomeIcon icon={faPhone} /> <a href="tel:+91 98916 21469" style={{textDecoration:'none', color:'white'}}>+91 98916 21469</a></span>
+                        <span className='ml-6 text-base'><FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:admin@globalpathfinders.co.in" style={{textDecoration:'none', color:'white'}}>
                             admin@globalpathfinders.co.in
                         </a></span>
                     </div>
-                    <div className="text-white flex space-x-4" style={{marginTop:'0px'}}>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <div className="text-white flex space-x-4" style={{ marginTop: '0px' }}>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faFacebook} size='xl' />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faTwitter} size='xl' />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faInstagram} size='xl' />
                         </a>
                     </div>
                 </nav>
             </div>
 
-            <nav className={`w-full flex justify-between items-center h-24 mx-auto px-4 text-medBlue-200 bg-white ${isSticky ? 'fixed top-0 left-0 w-full z-10' : ''}`}>
-
+            <nav className={`w-full flex justify-between items-center h-24 mx-auto px-4 text-medBlue-200 bg-white ${isSticky ? 'fixed top-0 left-0 w-full z-20' : ''}`}>
                 <div className="flex items-center">
                     <a href='/'> <img
                         src={`./images/logo.png`}
@@ -78,14 +83,35 @@ const Navbar = () => {
                         className="ml-1 lg:ml-10 "
                     /></a>
                 </div>
+
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex mr-1">
-                    {navItems.map((item) => (
+                    {navItems.slice(0, 3).map((item) => (
                         <li
                             key={item.id}
                             className="p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
                         >
-                            <Link to={`${item.url}`} >{item.text}</Link>
+                            <Link to={item.url}>{item.text}</Link>
+                        </li>
+                    ))}
+                    <li className="relative p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold">
+                        <span onClick={toggleDropdown} className="cursor-pointer">Students</span>
+                        {dropdownOpen && (
+                            <ul className="absolute top-full left-0 bg-white shadow-lg z-30 mt-2">
+                                {dropdownItems.map((item) => (
+                                    <li key={item.id} className="px-4 py-2 hover:bg-gray-200">
+                                        <Link to={item.url}>{item.text}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                    {navItems.slice(3).map((item) => (
+                        <li
+                            key={item.id}
+                            className="p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
+                        >
+                            <Link to={item.url}>{item.text}</Link>
                         </li>
                     ))}
                 </ul>
@@ -110,28 +136,44 @@ const Navbar = () => {
                             : "ease-in-out w-[100%] duration-500 fixed top-0 bottom-0 left-[-100%]"
                     }
                 >
-                    {/* Mobile Logo */}
-
                     <div className="flex">
-                    <a href='/'> <img
+                        <a href='/'> <img
                             src={`./images/logo.png`}
                             alt=""
-                            // height={50}
                             width={200}
                             className="m-3"
                         /></a>
                     </div>
 
-                    {/* Mobile Navigation Items */}
                     <div className="my-5">
-                        {navItems.map((item) => (
-                            <li
-                                key={item.id}
-                                className="py-3 border-b px-5 rounded-xl duration-300 hover:text-white cursor-pointer border-stone-300 text-medBlue-200"
-                            >
-                                <a href={item.url}>{item.text}</a>
-                            </li>
-                        ))}
+                    {navItems.slice(0, 3).map((item) => (
+                        <li
+                            key={item.id}
+                            className="p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
+                        >
+                            <Link to={item.url}>{item.text}</Link>
+                        </li>
+                    ))}
+                    <li className="relative p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold">
+                        <span onClick={toggleDropdown} className="cursor-pointer">Students</span>
+                        {dropdownOpen && (
+                            <ul className="absolute top-full left-0 bg-white shadow-lg z-30 mt-2">
+                                {dropdownItems.map((item) => (
+                                    <li key={item.id} className="px-4 py-2 hover:bg-gray-200">
+                                        <Link to={item.url}>{item.text}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                    {navItems.slice(3).map((item) => (
+                        <li
+                            key={item.id}
+                            className="p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
+                        >
+                            <Link to={item.url}>{item.text}</Link>
+                        </li>
+                    ))}
                     </div>
                 </ul>
             </nav>

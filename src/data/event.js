@@ -14,6 +14,30 @@ const event = [
       description: 'Description for Event 2',
       link: 'https://example.com/event2',
       image: 'event2.jpg',
+    },{
+      id: 2,
+      title: 'Event 2',
+      description: 'Description for Event 2',
+      link: 'https://example.com/event2',
+      image: 'event2.jpg',
+    },{
+      id: 2,
+      title: 'Event 2',
+      description: 'Description for Event 2',
+      link: 'https://example.com/event2',
+      image: 'event2.jpg',
+    },{
+      id: 2,
+      title: 'Event 2',
+      description: 'Description for Event 2',
+      link: 'https://example.com/event2',
+      image: 'event2.jpg',
+    },{
+      id: 2,
+      title: 'Event 2',
+      description: 'Description for Event 2',
+      link: 'https://example.com/event2',
+      image: 'event2.jpg',
     },
     // Add more events as needed
   ];

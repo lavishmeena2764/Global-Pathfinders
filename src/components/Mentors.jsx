@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FaQuoteLeft, FaArrowLeft, FaArrowRight} from 'react-icons/fa';
+import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './styles.css'; // Custom CSS for additional styling
 import mentors from '../data/mentor';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -48,14 +48,14 @@ const Mentors = () => {
 
     return (
         <div className="testimonial-slider-container mb-12">
-             <h2 className="text-5xl text-gray-700 font-bold text-center mb-16">Word from our Mentors</h2>
-                
+            <h2 className="text-5xl text-gray-700 font-bold text-center mb-16">Word from our Mentors</h2>
+
             <Slider {...settings}>
                 {mentors.map((mentor, index) => (
                     <div key={index} className={`testimonial-slide ${index === 1 ? 'active' : ''}`}>
                         <div
                             id={`testimonial-${mentor.id}`}
-                            className={`testimonial-card divHeight p-5 ${index === 1 ? 'active' : ''}`}
+                            className={`testimonial-card divHeight p-3 pt-5 ${index === 1 ? 'active' : ''}`}
                         >
                             <div className="photo-container flex justify-center">
                                 <img src={mentor.img} alt={mentor.name} className="photo" />
@@ -67,9 +67,9 @@ const Mentors = () => {
                                 <span className="designation">{mentor.uni}</span>
                             </div>
                             <div className='flex flex-row justify-between'>
-                            <a href={mentor.phone}><FontAwesomeIcon className="mx-2" icon={faPhone} size="lg" /></a>
-                            <a href={mentor.linkedin}><FontAwesomeIcon className="mx-2" icon={faLinkedin} size="lg" /></a>
-                            <a href={mentor.email}><FontAwesomeIcon className="mx-2" icon={faEnvelope} size="lg" /></a>
+                                <a href={mentor.phone}><FontAwesomeIcon className="mx-2" icon={faPhone} size="lg" /></a>
+                                <a href={mentor.linkedin}><FontAwesomeIcon className="mx-2" icon={faLinkedin} size="lg" /></a>
+                                <a href={mentor.email}><FontAwesomeIcon className="mx-2" icon={faEnvelope} size="lg" /></a>
                             </div>
                         </div>
                     </div>

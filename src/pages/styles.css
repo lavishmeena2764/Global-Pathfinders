@@ -129,3 +129,80 @@ h1{
 }
 
 
+/* Example styles */
+.ql-editor {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ql-editor h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.ql-editor h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.ql-editor h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* styles.css */
+
+/* Adjustments for React Quill */
+  .ql-editor {
+    font-size: 16px;
+    line-height: 1.6;
+    height: fit-content;
+  }
+  
+  .ql-editor h1,
+  .ql-editor h2,
+  .ql-editor h3,
+  .ql-editor h4,
+  .ql-editor h5,
+  .ql-editor h6 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  .ql-editor img{
+    width: 30vw;
+  }
+
+  .ql-editor blockquote {
+    border-left: 2px solid #ddd;
+    margin-left: 0;
+    padding-left: 10px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  
+  /* File input styles */
+  .file-input {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #6f7c94;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .file-input:hover {
+    background-color: #475469;
+  }
+  
+
+/* Add more styles as needed */

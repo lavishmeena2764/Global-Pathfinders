@@ -22,6 +22,7 @@ const Logo = () => {
     autoplaySpeed: 0,
     cssEase: 'linear',
     slidesToScroll: 1,
+    arrows: false,
     responsive: [
         {
             breakpoint: 2048,
@@ -51,7 +52,7 @@ const Logo = () => {
   };
 
   return (
-    <div className="logo-slider-container">
+    <div className="logo-slider-container p-8">
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} className="my-8">

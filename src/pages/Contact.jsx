@@ -14,7 +14,7 @@ const Contact = () => {
         email: '',
         phone: '',
         subject: '',
-        message: ''
+        body: ''
     });
 
     const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
@@ -28,8 +28,9 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus('submitting');
+        console.log(formData)
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('http://localhost:4000/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -138,8 +139,8 @@ const Contact = () => {
                                 <div>
                                     <label className="block text-gray-700 font-semibold mb-2">Your Message</label>
                                     <textarea
-                                        name="message"
-                                        value={formData.message}
+                                        name="body"
+                                        value={formData.body}
                                         onChange={handleChange}
                                         className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         placeholder="Your Message"

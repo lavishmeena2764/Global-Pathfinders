@@ -19,6 +19,10 @@ import CreateEvent from './pages/Admin/CreateEvent';
 import ManageEvents from './pages/Admin/ManageEvents';
 import Blog from './pages/Blog';
 import Home from './pages/Home';
+import StudyInSingapore from './pages/StudyInSingapore';
+import CallBackQueries from './pages/Admin/CallBackQueries';
+import StudyInUK from './pages/StudyInUK';
+import StudyInUSA from './pages/StudyInUSA';
 function App() {
   return (
     <>
@@ -31,6 +35,9 @@ function App() {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/blog/:titleHash" element={<Blog />} />
         <Route path='/why-us' element={<WhyUs />} />
+        <Route path='/study-in-singapore' element={<StudyInSingapore />} />
+        <Route path='/study-in-uk' element={<StudyInUK />} />
+        <Route path='/study-in-usa' element={<StudyInUSA />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/goals-academic' element={<ProgramsPage title1={title1} programData1={programData1} c1={c1} head1={head1} />} />
         <Route path='/research-scholar' element={<ProgramsPage title1={title2} programData1={programData2} c1={c2} head1={head2} />} />
@@ -42,6 +49,7 @@ function App() {
           <Route path="create-event" element={<CreateEvent />} />
           <Route path="manage-events" element={<ManageEvents />} />
           <Route path="contact-queries" element={<ContactQueries />} />
+          <Route path="callback-queries" element={<CallBackQueries />} />
       </Route>
       </Routes>
 

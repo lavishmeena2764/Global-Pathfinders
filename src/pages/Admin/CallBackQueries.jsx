@@ -1,8 +1,8 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 // import contact from '../../data/contacts';
-import axios from 'axios';
 
-const ContactQueries = () => {
+const CallBackQueries = () => {
   const [queries, setQueries] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [inputPage, setInputPage] = useState(1);
@@ -11,9 +11,8 @@ const ContactQueries = () => {
   useEffect(() => {
     // Fetch all contact queries from the server
     const fetchQueries = async () => {
-      const res = await axios.get('http://localhost:4000/contact');
-      // const data = await res.json();
-      console.log(res.data.data);
+      const res = await axios.get('http://localhost:4000/contact/callback');
+      console.log(res.data.data)
       setQueries(res.data.data);
     };
     fetchQueries();
@@ -49,7 +48,7 @@ const ContactQueries = () => {
 
   return (
     <div className="container p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-4 text-indigo-900">Contact Queries</h1>
+      <h1 className="text-3xl font-bold mb-4 text-indigo-900">CallBack Queries</h1>
       <table className="min-w-full bg-white rounded-lg shadow">
         <thead>
           <tr>
@@ -57,17 +56,15 @@ const ContactQueries = () => {
             <th className="py-2 px-4 border-b">Email</th>
             <th className="py-2 px-4 border-b">Phone No.</th>
             <th className="py-2 px-4 border-b">Subject</th>
-            <th className="py-2 px-4 border-b">Message</th>
           </tr>
         </thead>
         <tbody>
           {currentQueries.map((query) => (
-            <tr key={query.id}>
+            <tr key={query._id}>
               <td className="py-2 px-4 border-b">{query.name}</td>
               <td className="py-2 px-4 border-b">{query.email}</td>
               <td className="py-2 px-4 border-b">{query.phone}</td>
               <td className="py-2 px-4 border-b">{query.subject}</td>
-              <td className="py-2 px-4 border-b">{query.body}</td>
             </tr>
           ))}
         </tbody>
@@ -93,7 +90,7 @@ const ContactQueries = () => {
           of {totalPages}
           <button
             onClick={handleGoToPage}
-            disabled={ totalPages === 1 }
+            disabled={totalPages === 1}
             className="ml-2 px-3 py-1 rounded bg-blue-500 text-white disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Go
@@ -111,4 +108,4 @@ const ContactQueries = () => {
   );
 };
 
-export default ContactQueries;
+export default CallBackQueries;

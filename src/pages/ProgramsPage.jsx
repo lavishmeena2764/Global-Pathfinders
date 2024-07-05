@@ -55,7 +55,7 @@ const ProgramsPage = (props) => {
 
           <div className="text-center mb-12">
             <a
-              href="#"
+              href="/contact"
               className="inline-block bg-indigo-900 text-white font-bold py-4 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 text-lg"
             >
               Book a Demo
