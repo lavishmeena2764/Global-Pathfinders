@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faLocationDot, faSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
                         <h2 className="text-left text-3xl font-bold mb-4">About Us</h2>
                         <ul className='text-left text-lg leading-10'>
                             <li><FontAwesomeIcon icon={faSquare} size="2xs" style={{color: "#74C0FC",}} />&nbsp;<a href="/" style={{textDecoration:'none', color:'white'}}> Home</a></li>
-                            <li><FontAwesomeIcon icon={faSquare} size="2xs" style={{color: "#74C0FC",}} />&nbsp;<a href="/about" style={{textDecoration:'none', color:'white'}}> About Us</a></li>
+                            <li><FontAwesomeIcon icon={faSquare} size="2xs" style={{color: "#74C0FC",}} />&nbsp;<a href="/about" style={{textDecoration:'none', color:'white'}}> About</a></li>
                             <li><FontAwesomeIcon icon={faSquare} size="2xs" style={{color: "#74C0FC",}} />&nbsp;<a href="/why-us" style={{textDecoration:'none', color:'white'}}> Why Us</a></li>
                             <li><FontAwesomeIcon icon={faSquare} size="2xs" style={{color: "#74C0FC",}} />&nbsp;<a href="/programs" style={{textDecoration:'none', color:'white'}}> Programs</a></li>
                         </ul>
@@ -52,21 +52,21 @@ const Footer = () => {
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
-                                    <FontAwesomeIcon icon={faTwitter} />
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                    <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
-                                    <FontAwesomeIcon icon={faLinkedin} />
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                    <FontAwesomeIcon icon={faYoutube} />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="mt-8 text-center border-t border-gray-700 pt-2 flex justify-evenly flex-wrap">
-                    <p>&copy; <a href="/#" className="text-white">Copyright @ 2024 Global Pathfinders</a>. All Right Reserved.</p> <p>Created by Lavish Meena</p>
+                    <p>&copy; Copyright @ 2024 <a href="/#" className="text-white">Global Pathfinders</a>. All Right Reserved.</p> <p>Created by Lavish Meena</p>
                 </div>
             </div>
         </footer>

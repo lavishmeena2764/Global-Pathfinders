@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
 
     const navItems = [
         { id: 1, text: "Home", url: "/" },
-        { id: 2, text: "About Us", url: "/about" },
+        { id: 2, text: "About", url: "/about" },
         { id: 3, text: "Why Us", url: "/why-us" },
         { id: 4, text: "Programs", url: "/programs" },
         { id: 5, text: "Blogs", url: "/blog" },
@@ -65,10 +65,13 @@ const Navbar = () => {
                             <FontAwesomeIcon icon={faFacebook} size='xl' />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
-                            <FontAwesomeIcon icon={faTwitter} size='xl' />
+                            <FontAwesomeIcon icon={faLinkedin} size='xl' />
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faInstagram} size='xl' />
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
+                            <FontAwesomeIcon icon={faYoutube} size='xl' />
                         </a>
                     </div>
                 </nav>
@@ -95,7 +98,7 @@ const Navbar = () => {
                         </li>
                     ))}
                     <li className="relative p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold">
-                        <span onClick={toggleDropdown} className="cursor-pointer">Students</span>
+                        <span onClick={toggleDropdown} className="cursor-pointer">Study Abroad</span>
                         {dropdownOpen && (
                             <ul className="absolute top-full left-0 bg-white shadow-lg z-30 mt-2">
                                 {dropdownItems.map((item) => (
@@ -155,7 +158,7 @@ const Navbar = () => {
                         </li>
                     ))}
                     <li className="relative p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold">
-                        <span onClick={toggleDropdown} className="cursor-pointer">Students</span>
+                        <span onClick={toggleDropdown} className="cursor-pointer">Study Abroad</span>
                         {dropdownOpen && (
                             <ul className="absolute top-full left-0 bg-white shadow-lg z-30 mt-2">
                                 {dropdownItems.map((item) => (

@@ -1,8 +1,16 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 
-const Dashboard = () => (
-  <div className="flex min-h-screen bg-gray-100">
+const Dashboard = () => {
+
+  const navigate = useNavigate();
+  const handleLogout = (e)=>{
+    e.preventDefault();
+    localStorage.removeItem("jwtToken");
+    navigate('/');
+  };
+
+  return (<><div className="flex min-h-screen bg-gray-100">
     <aside className="w-64 bg-indigo-900 text-white">
       <div className="flex flex-col items-center py-6">
         <a href="/"><img src="/images/logo.png" alt="Global Pathfinders Logo" className="w-full mb-4" /></a>
@@ -15,13 +23,14 @@ const Dashboard = () => (
         <Link to="manage-events" className="block px-4 py-2 rounded hover:bg-indigo-300">Manage Events</Link>
         <Link to="contact-queries" className="block px-4 py-2 rounded hover:bg-indigo-300">Contact Queries</Link>
         <Link to="callback-queries" className="block px-4 py-2 rounded hover:bg-indigo-300">CallBack Queries</Link>
+        <Link onClick={handleLogout} className="block px-4 py-2 rounded hover:bg-indigo-300">Logout</Link>
       </nav>
     </aside>
     <main className="flex-1 p-4 flex flex-col items-center justify-center">
     <h2 className="text-5xl text-gray-700 font-bold text-left mb-8">Welcome to Global Pathfinders Admin Portal</h2>
     <Outlet />
     </main>
-  </div>
-);
+  </div></>)
+}
 
 export default Dashboard;

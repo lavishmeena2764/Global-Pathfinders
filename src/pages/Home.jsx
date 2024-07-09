@@ -84,8 +84,8 @@ const Home = () => {
 
             <div className='flex flex-row justify-evenly flex-wrap'>
               <div className='text-center m-2'>
-                <h1 className='text-3xl md:w-96 w-max-96 font-bold text-gray-200'>"hiee this is me GP is very good Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci illum aspernatur iste explicabo excep  Debitis adipisci illum aspernatur iste explicabo excep  Debitis adipisci illum aspernatur iste explicabo excep "</h1>
-                <a href="/testimonials"><button className='btn btn-light text-lg mt-2'>View All</button></a>
+                <h1 className='text-2xl md:w-96 w-max-96 font-italic text-gray-200'>"They helped me craft my story and understand my real interest and passion, and now when I bring that to Hong Kong, I can network better I can meet with people better, and I am able to aggregate myself into a network that lends me a lot, and I recommend their service to everyone." <p className='text-right mt-2 text-xl'>~ Naman Tekriwal,<br />Hong Kong Technological University(HKUST)</p></h1>
+                <a href="/testimonials"><button className='btn btn-light text-lg mt-4'>View All</button></a>
               </div>
               <VideoPlayer src="/videos/1.mp4" />
             </div>
@@ -104,11 +104,11 @@ const Home = () => {
         </section>
 
         {/* FAQ */}
-        <section className="bg-gray-200 pb-20">
+        {/* <section className="bg-gray-200 pb-20">
           <div className="container mx-auto px-6">
             <Accordion faqs={faqs} />
           </div>
-        </section>
+        </section> */}
 
         {/* Logo */}
         {/* <div className="mx-auto p-6 md:mb-0 mb-64"> */}

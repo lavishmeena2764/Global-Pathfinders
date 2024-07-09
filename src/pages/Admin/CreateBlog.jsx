@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, Button, FileInput } from 'flowbite-react';
+import { Alert, Button, FileInput, Spinner } from 'flowbite-react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
@@ -8,14 +8,15 @@ const CreateBlog = () => {
   const [formData, setFormData] = useState({ title: '', body: '', image: null });
   const [publishError, setPublishError] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const modules = {
     toolbar: {
       container: [
-        [{ 'header': '1'}, {'header': '2'}, {'header': '3'}, { 'font': [] }],
-        [{size: []}],
+        [{ 'header': '1' }, { 'header': '2' }, { 'header': '3' }, { 'font': [] }],
+        [{ size: [] }],
         ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-        [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
         ['link', 'image', 'video'],
         ['clean']
       ],
@@ -31,36 +32,42 @@ const CreateBlog = () => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    setFormData({ ...formData, image: file });
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setImagePreview(reader.result);
-    };
-    reader.readAsDataURL(file);
+    if (file) {
+      setFormData({ ...formData, image: file });
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImagePreview(null);
+    }
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
     setPublishError(null); // Clear any previous error message
+    setIsLoading(true); // Show loader
     try {
-      // Show waiting message or loader if needed
       console.log('Submitting form data:', formData);
-      const { data } = await axios.post('http://localhost:4000/blog/upload', formData, {
+      const resp = await axios.post('http://localhost:4000/blog/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
       });
-      console.log('Response from server:', data);
-      if (data.ok) {
-        // Show success message or navigate to success page
-        console.log('Post published successfully!');
-        // Example: show success message or redirect to another page
+      console.log('Response from server:', resp);
+      if (resp.data.blog) {
+        alert('Blog published successfully!');
+        window.location.reload();
       } else {
-        // Handle server-side validation errors or other errors
-        setPublishError(data.message || 'Unknown error occurred');
+        alert("Error Publishing Blog at the moment. \nPlease try after some time");
       }
     } catch (error) {
+      alert("Error Publishing Blog!!");
       console.error('Error publishing post:', error);
       setPublishError('Something went wrong');
+    } finally {
+      setIsLoading(false); // Hide loader
     }
   };
 
@@ -105,11 +112,12 @@ const CreateBlog = () => {
             type="submit"
             gradientDuoTone="purpleToPink"
             className="py-2 text-xl btn btn-primary"
+            disabled={isLoading}
           >
-            Publish
+            {isLoading ? <Spinner /> : 'Publish'}
           </Button>
         </div>
-        {publishError && <Alert className="mt-5" color="failure">{publishError}</Alert>}
+        {publishError && <Alert color="red">{publishError}</Alert>}
       </form>
     </div>
   );

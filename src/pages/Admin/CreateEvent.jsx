@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import axios from 'axios'; // Import Axios for API calls
 import { Button, FileInput, TextInput } from 'flowbite-react';
 
-const CreateEvent = ({ onCreateEvent }) => {
+const CreateEvent = () => {
     const [formData, setFormData] = useState({ 
         title: '', 
         caption: '', 
@@ -25,19 +25,11 @@ const CreateEvent = ({ onCreateEvent }) => {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            onCreateEvent(data); // Update parent component with new event
-            setModalIsOpen(false); // Close modal after successful creation
-            setFormData({ 
-                title: '', 
-                caption: '', 
-                image: null, 
-                link: '', 
-                date: '', 
-                time: '', 
-                venue: '' 
-            }); // Clear form data
-            setImagePreview(null); // Clear image preview
+            
+            alert("Event uploaded Successfully");
+            window.location.reload();
         } catch (error) {
+            alert(error.response.data.message);
             console.error('Error creating event:', error);
             // Handle error as needed
         }
@@ -45,8 +37,12 @@ const CreateEvent = ({ onCreateEvent }) => {
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        setFormData({ ...formData, image: file });
-        setImagePreview(URL.createObjectURL(file));
+        if (file) {
+            setFormData({ ...formData, image: file });
+            setImagePreview(URL.createObjectURL(file));
+        } else {
+            setImagePreview(null);
+        }
     };
 
     return (

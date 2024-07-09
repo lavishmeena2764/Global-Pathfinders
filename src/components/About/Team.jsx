@@ -8,7 +8,7 @@ const Team = () => {
                 <div className="grid gap-8">
                     {teamMembers.map((member, index) => (
                         <div key={index} className={`bg-white p-6 rounded-lg flex flex-col ${index % 2 === 0 ? 'xl:flex-row' : 'xl:flex-row-reverse'}`}>
-                            <img src={member.photo} alt={member.name} className="h-full mx-auto lg:mx-0" />
+                            <img src={member.photo} alt={member.name} className="h-96 mx-auto lg:mx-0" />
                             <div className="lg:ml-6 lg:mr-6 flex flex-col justify-center lg:text-left">
                                 <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                                 <p className="text-lg text-gray-600">{member.description}</p>
@@ -23,19 +23,24 @@ const Team = () => {
 
 const teamMembers = [
     {
-        name: "Shifali Mehta",
-        description: "Shifali Mehta is the co-founder of Global Pathfinders. I began my journey as an independent educational consultant because it combines my expertise in personal branding and higher education with my passion for coaching students. The passion that fuels my work is deeply personal. As a mother of two college students, one at Stanford University and the other at UC Berkeley, I know firsthand how education can change a life. As a parent, I understand the desire of other parents to see their kids in top-ranked universities and recognize their confusions and workload that sometimes bring delays in application until they realize it’s too late. While travelling to competitions and tournaments with my children, I had the pleasure of meeting some of the brightest kids around. While interacting with these students, I identified many gap areas missed by students and counsellors in the students’ application journey. This experience made me realize my passion for mentoring children with resourceful insights for their future. Soon enough, I became the go-to person whenever they needed personal and professional advice . My expertise lies not just in helping the students build their profile but also in helping them realise and raise their emotional quotient. I strongly believe in the power  of education, and I feel privileged to have the opportunity to help guide students on their path to success. By helping them develop a strong personal brand and stay motivated, I hope to empower them to achieve their full potential and make a positive impact in the world.",
+        name: "Shifali Mehta (Founder & CEO)",
+        description: "With over seven years of dedicated experience in international admissions, Shifali Mehta has achieved a remarkable 100% success rate in guiding students to gain acceptance into their best-fit universities. Her dynamic leadership and deep understanding of the admissions landscape make her an invaluable resource for aspiring students. Shifali excels in profile building, helping students craft compelling and unique personal narratives. She is also an expert in essay writing, ensuring that every application she oversees stands out to admissions committees. Under her guidance, students are empowered to present their best selves, significantly increasing their chances of success.",
         photo: "./images/shifali.jpg"
     },
     {
-        name: "Rajiv Mehta",
-        description: "Mr Mehta is the founder of Xtended Business Reporting LTD bringing substantial years of financial and entrepreneurial experience to the firm. He has invested in various companies and start-ups across sectors. His key passion is to mentor and guide students to follow their dreams.",
+        name: "Rajiv Mehta (Co-Founder)",
+        description: "Rajiv is the CEO of Xtended Business Reporting LTD and brings substantial years of financial and entrepreneurial experience to the firm. He is passionate about mentoring and guiding students toward success.",
         photo: "./images/rajiv.jpg"
     },
     {
-        name: "Parminder Kaur",
+        name: "Isha George (Director, Lead Counsellor)",
         description: "Going beyond the set standards” has always been Ms. Parminder’s motto. Parminder has always made sure to deliver exemplary training to her students and travelling the extra mile to identify the caliber of each individual. With her 10+ years of experience in tutoring SAT, GRE, and GMAT, she has built her legacy by guiding and teaching over 1000+ individuals. Parminder is an expert not only in the verbal section of such competitive tests, but also in mentoring students and walking them through the obscurity of these tests with ease. Alongside being a teacher, she is also a certified trainer coach. She has led several 'train the trainer' programs and has certified 25+ trainers and conducted 30+ training sessions. In her recent works as a consultant, Parminder has consulted and designed course curriculums for some major education companies.",
         photo: "./images/parminder.jpg"
+    },
+    {
+        name: "Jiya Chawla (Head of Tech & Research)",
+        description: "Jiya is passionate about technology and loves mentoring students in this field. She brings research expertise to the organization and has previously been associated with institutions such as LSR and ISB.",
+        photo: "./images/jiya.jpg"
     }
 ];
 

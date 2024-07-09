@@ -67,7 +67,7 @@ const ManageBlogs = () => {
       <ul className="space-y-4">
         {currentBlogs.map((blog) => (
           <li key={blog._id} className="p-4 bg-white rounded shadow flex justify-between items-center">
-            <img src="https://globalpathfinders.co.in/wp-content/uploads/2023/06/blog-img4.jpg" alt="" className="w-16 h-16 mr-4 rounded" />
+            <img src={blog.img} alt="" className="w-16 h-16 mr-4 rounded" />
             <div className="flex-1">
               <a href={`/blog/${blog.id}`} className="text-xl font-bold text-indigo-700">{blog.title}</a>
               <p className="text-gray-700 mt-2" dangerouslySetInnerHTML={{__html:blog.body.split(' ').slice(0, 10).join(' ')+"..."}}></p>

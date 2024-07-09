@@ -23,6 +23,7 @@ import StudyInSingapore from './pages/StudyInSingapore';
 import CallBackQueries from './pages/Admin/CallBackQueries';
 import StudyInUK from './pages/StudyInUK';
 import StudyInUSA from './pages/StudyInUSA';
+import PrivateRoute from './components/PrivateRoute';
 function App() {
   return (
     <>
@@ -43,7 +44,11 @@ function App() {
         <Route path='/research-scholar' element={<ProgramsPage title1={title2} programData1={programData2} c1={c2} head1={head2} />} />
         <Route path='/sat' element={<ProgramsPage title1={title3} programData1={programData3} c1={c3} head1={head3} />} />
         <Route path="/admin" element={<Login />} />
-        <Route path="/admin/home" element={<Dashboard />}>
+        <Route path="/admin/home" element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }>
           <Route path="create-blog" element={<CreateBlog />} />
           <Route path="manage-blogs" element={<ManageBlogs />} />
           <Route path="create-event" element={<CreateEvent />} />

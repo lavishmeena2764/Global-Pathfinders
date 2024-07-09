@@ -11,12 +11,12 @@ const About = () => {
     return (
         <>
             <Navbar />
-            <PageHeader title="About Us" />
+            <PageHeader title="About" />
             <div className="container mx-auto p-6">
 
                 <section className="mb-24 text-left">
                     <div className='text-center'>
-                        <h1 className="text-4xl font-bold mb-4 text-gray-700">About Us</h1>
+                        <h1 className="text-4xl font-bold mb-4 text-gray-700">About</h1>
                         <p className="text-lg mx-auto mb-8">
                             We take pride in our track record of successfully placing numerous 
                             international students in renowned universities worldwide. With our 

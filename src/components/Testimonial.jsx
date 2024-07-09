@@ -5,7 +5,7 @@ const testimonials = [
     id: 'content1',
     name: 'Naman Tekriwal',
     uni: 'The Hong Kong University of Science and Technology',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: '/images/mentors/nt.PNG',
     title: 'Comprehensive Guidance and Support',
     text1: "My experience with Global Pathfinders was very holistic and structured, starting from planning my academics and extra-curricular activities to assistance with my personal statement, essays and letter of recommendations.",
     text2: "Under Shifali maam’s guidance, you always have a mentor to reach out to and ask all sorts of questions, and she guides you in the best possible direction. I would recommend their excellent services to every student who is looking to secure admission overseas."
@@ -13,39 +13,49 @@ const testimonials = [
   {
     id: 'content2',
     name: 'Gauri Aggarwal',
-    uni: '',
-    image: '',
+    uni: 'Vanderbilt University',
+    image: '/images/mentors/ga.JPG',
     title: 'Structured Approach to Personal Growth',
     text1: "I wholeheartedly endorse the experience of choosing Global Pathfinders. Not only were my extracurricular initiatives and academics well organised, as a result of their well-structured approach, but it was also ensured that I made the best choices and steadily advanced in the direction of my personal growth.",
     text2: "Under Rajiv sir’s impeccable direction, attaining your highly wanted goals becomes a joyous journey as an extraordinarily challenging application process becomes a relieved event with expert guidance, unwavering support, and experience."
   },
   {
     id: 'content3',
+    name: 'Chhavi Luthra',
+    uni: 'University of Toronto, Canada',
+    image: '/images/mentors/cl.jpg', // Replace with actual image if available
+    title: 'Successful Journey to University of Toronto',
+    text1: "My experience with Global Pathfinders was extremely helpful. Shifali mam and Isha mam supported me throughout the journey, guiding me at each step. They selected ideal courses for me, aligning with my interest. The most beneficial aspect was their ongoing efforts and regular sessions, which assisted me stay on course and maintain my application concentration. This journey would not have been possible without them.",
+    text2: "I am thankful for their unwavering support which enabled me to be accepted into my dream universities with scholarships."
+  },
+  {
+    id: 'content4',
+    name: 'Navya Sehgal',
+    uni: '',
+    image: '/images/mentors/ns.jpg',
+    title: 'Grateful for unwavering mentorship and support.',
+    text1: "Thank you for everything, Shifali Ma'am. I couldn't be more grateful to have you as my mentor. I am incredibly thankful for everything you've done for me. Without your support, I'm sure I wouldn't have achieved even a fraction of what I have. ",
+    text2: "Thank you for being there at every step, motivating, strengthening, and pushing me to reach higher. Thanks for sticking with and believing in me, even when I wasn't shining bright. You are the best counselor anyone could ever ask for. Thanks again to the team of Global Pathfinders who work so diligently for all their students."
+  },
+  {
+    id: 'content5',
     name: 'Nishant Garg',
     uni: '',
-    image: '',
+    image: '/images/mentors/demo.jpg',
     title: 'Prompt and Proactive Counseling',
     text1: "My journey with Global Pathfinders was very good. The counselling part was done excellently. They are very prompt in their services and guide you at each step.",
     text2: "Shifali mam was very proactive in all the processes right from selection of the universities till the final stage. Hence Global Pathfinders is highly recommended to anyone planning to study in Canada."
   },
   {
-    id: 'content4',
+    id: 'content6',
     name: 'Yash Agarwal',
     uni: '',
-    image: '',
+    image: '/images/mentors/demo.jpg',
     title: 'Effective SAT and IELTS Preparation',
     text1: "I studied for SAT and IELTS from Parminder mam. She's a wonderful teacher and because of her I was able to achieve a generous score of 1420 in SAT and 7.5 band in IELTS.",
     text2: "Her teaching style is very simple and straight to the point, she's very patient and helpful. All the material provided by her was very relevant and helped me to understand the variety of questions being asked and how to approach them."
   },
-  {
-    id: 'content5',
-    name: 'Chhavi Luthra',
-    uni: 'University of Toronto, Canada',
-    image: '', // Replace with actual image if available
-    title: 'Successful Journey to University of Toronto',
-    text1: "My experience with Global Pathfinders was extremely helpful. Shifali mam and Isha mam supported me throughout the journey, guiding me at each step. They selected ideal courses for me, aligning with my interest. The most beneficial aspect was their ongoing efforts and regular sessions, which assisted me stay on course and maintain my application concentration. This journey would not have been possible without them.",
-    text2: "I am thankful for their unwavering support which enabled me to be accepted into my dream universities with scholarships."
-  }
+  
 ];
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState('content1');

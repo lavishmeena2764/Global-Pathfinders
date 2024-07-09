@@ -6,17 +6,21 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/solid';
 
 const EventsCarousel = () => {
   const [events, setEvents] = useState([]);
-
   useEffect(() => {
     // Simulate fetching data from the backend
-    const fetchEvents = async () => {
-      const response = await fetch(`http://localhost:4000/event`);
-      const data = await response.json();
-      console.log(data.data);
-      setEvents(data.data);
-    };
+    try{
+      const fetchEvents = async () => {
+        const response = await fetch(`http://localhost:4000/event`);
+        const data = await response.json();
+        console.log(data.data);
+        setEvents(data.data);
+      };
+      fetchEvents();
+    }catch{
+      alert("error loading events!");
+      window.location.reload();
+    }
 
-    fetchEvents();
   }, []);
 
   // Determine the settings based on the number of events
@@ -55,7 +59,7 @@ const EventsCarousel = () => {
   return (
     <>
     {events.length>0?<div className="container mx-auto py-12">
-      <h2 className="text-5xl text-gray-700 font-bold text-left mb-8">Upcoming Events</h2>
+      <h2 className="text-5xl text-gray-700 font-bold text-left mb-8">Events</h2>
       {events.length < 4 ? (
         <div className="flex flex-wrap justify-start">
           {events.map((event) => (
@@ -66,7 +70,7 @@ const EventsCarousel = () => {
                   <h3 className="text-xl font-semibold text-gray-800">{event.title}</h3>
                   <p className="text-gray-600 mt-2 caption">{event.caption}</p>
                   <div className="mt-4">
-                    <p className="text-gray-600"><strong>Date:</strong> {event.date}</p>
+                    <p className="text-gray-600"><strong>Date:</strong> {event.date.split('T')[0]}</p>
                     <p className="text-gray-600"><strong>Time:</strong> {event.time}</p>
                     <p className="text-gray-600"><strong>Venue:</strong> {event.venue}</p>
                   </div>
@@ -76,7 +80,7 @@ const EventsCarousel = () => {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
                   >
-                    Register Now
+                    Link
                   </a>
                 </div>
               </div>
@@ -103,7 +107,7 @@ const EventsCarousel = () => {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
                   >
-                    Register Now
+                    Link
                   </a>
                 </div>
               </div>
