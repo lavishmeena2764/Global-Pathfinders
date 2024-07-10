@@ -20,7 +20,7 @@ const CreateEvent = () => {
         e.preventDefault();
         try {
             console.log(formData)
-            const { data } = await axios.post('http://localhost:4000/event/upload', formData, {
+            const { data } = await axios.post(`${process.env.BACKEND_URL}/event/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

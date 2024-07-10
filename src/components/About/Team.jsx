@@ -8,7 +8,7 @@ const Team = () => {
                 <div className="grid gap-8">
                     {teamMembers.map((member, index) => (
                         <div key={index} className={`bg-white p-6 rounded-lg flex flex-col ${index % 2 === 0 ? 'xl:flex-row' : 'xl:flex-row-reverse'}`}>
-                            <img src={member.photo} alt={member.name} className="h-96 mx-auto lg:mx-0" />
+                            <img src={member.photo} alt={member.name} className="w-80 mx-auto lg:mx-0" />
                             <div className="lg:ml-6 lg:mr-6 flex flex-col justify-center lg:text-left">
                                 <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                                 <p className="text-lg text-gray-600" dangerouslySetInnerHTML={{ __html: member.description }}></p>
@@ -35,7 +35,7 @@ const teamMembers = [
     {
         name: "Isha George (Director, Lead Counsellor)",
         description: "Isha is your ultimate ally in turning academic dreams into reality. With a knack for helping students reach top-tier universities around the globe, she's not just about getting you into college but also ensuring you thrive once you're there. <br /> With over four years of experience, Isha has mastered the intricacies of global admissions. Whether your goal is a university in the US, UK, Asia, or beyond, Isha’s expertise ensures you get there. Her journey—from the bustling art scenes of Bombay to life-altering stints with UNICEF and an Indo-French NGO, to the esteemed halls of renowned institutions like St. Stephen's—brings a unique perspective to her counseling approach.",
-        photo: "/images/parminder.jpg"
+        photo: "/images/isha.jpg"
     },
     {
         name: "Jiya Chawla (Head of Tech & Research)",

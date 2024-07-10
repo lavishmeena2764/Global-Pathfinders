@@ -61,16 +61,16 @@ const Navbar = () => {
                         </a></span>
                     </div>
                     <div className="text-white flex space-x-4" style={{ marginTop: '0px' }}>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
+                        <a href="https://www.facebook.com/profile.php?id=100090796356340" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faFacebook} size='xl' />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
+                        <a href="https://www.linkedin.com/company/global-pathfinders/" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faLinkedin} size='xl' />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
+                        <a href="https://www.instagram.com/globalpathfinders" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faInstagram} size='xl' />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
+                        <a href="https://www.youtube.com/@GlobalPathfinders" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'white'}}>
                             <FontAwesomeIcon icon={faYoutube} size='xl' />
                         </a>
                     </div>
@@ -148,11 +148,11 @@ const Navbar = () => {
                         /></a>
                     </div>
 
-                    <div className="my-5">
+                    <div className="my-2">
                     {navItems.slice(0, 3).map((item) => (
                         <li
                             key={item.id}
-                            className="p-4 rounded-xl m-2 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
+                            className="p-4 rounded-xl m-2 my-0 cursor-pointer duration-300 hover:text-blue-500 text-lg font-semibold"
                         >
                             <Link to={item.url}>{item.text}</Link>
                         </li>

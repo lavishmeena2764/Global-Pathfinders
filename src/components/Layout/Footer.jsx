@@ -49,16 +49,16 @@ const Footer = () => {
                                 </span>
                             </p>
                             <div className="space-x-4 my-4">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                <a href="https://www.facebook.com/profile.php?id=100090796356340" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                <a href="https://www.linkedin.com/company/global-pathfinders/" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                <a href="https://www.instagram.com/globalpathfinders" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
+                                <a href="https://www.youtube.com/@GlobalPathfinders" target="_blank" rel="noopener noreferrer" className="text-2xl text-white">
                                     <FontAwesomeIcon icon={faYoutube} />
                                 </a>
                             </div>

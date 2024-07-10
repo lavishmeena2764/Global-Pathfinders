@@ -11,7 +11,7 @@ const CallBackQueries = () => {
   useEffect(() => {
     // Fetch all contact queries from the server
     const fetchQueries = async () => {
-      const res = await axios.get('http://localhost:4000/contact/callback');
+      const res = await axios.get(`${process.env.BACKEND_URL}/contact/callback`);
       console.log(res.data.data)
       setQueries(res.data.data);
     };

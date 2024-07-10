@@ -72,7 +72,7 @@ const Carousel = () => {
                     <div key={index}>
                         <a href={card.link} className='hover:no-underline'>
                             <div className="group bg-white shadow-xl rounded-lg p-4 m-3 program-card hover:scale-105 hover:duration-500">
-                                <img src={card.image} alt={card.title} className="rounded-lg mb-4 w-full h-64" />
+                                <img src={card.image} alt={card.title} className="rounded-lg mb-4 h-64" />
                                 <h2 className="text-2xl font-bold mb-2 group-hover:text-blue-500">{card.title}</h2>
                                 <p className="text-gray-700">{card.description}</p>
                             </div>

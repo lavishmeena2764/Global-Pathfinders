@@ -26,7 +26,7 @@ const BlogTemp = () => {
     // Function to fetch a specific blog by titleHash
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/blog/${titleHash}`);
+        const response = await fetch(`${process.env.BACKEND_URL}/blog/${titleHash}`);
         const data = await response.json();
         if (data.data.length === 0) {
           return navigate('/page-not-found');
@@ -40,7 +40,7 @@ const BlogTemp = () => {
     // Function to fetch all blogs for the Latest Blogs section
     const fetchAllBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:4000/blog');
+        const response = await fetch(`${process.env.BACKEND_URL}/blog`);
         const data = await response.json();
         // Filter out the current blog from the latest blogs
         const filteredBlogs = data.data.filter(blog => blog.titleHash !== titleHash);

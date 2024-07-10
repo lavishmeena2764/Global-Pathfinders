@@ -12,7 +12,7 @@ const ManageBlogs = () => {
     // Fetch blogs from the server
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/blog'); // Adjust the API endpoint as needed
+        const res = await axios.get(`${process.env.BACKEND_URL}/blog`); // Adjust the API endpoint as needed
         setBlogs(res.data.data);
       } catch (error) {
         console.error('Error fetching blogs:', error);
@@ -25,7 +25,7 @@ const ManageBlogs = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this blog?');
     if (confirmDelete) {
       // Delete blog by id
-      const res = await fetch(`http://localhost:4000/blog/${id}`, {
+      const res = await fetch(`${process.env.BACKEND_URL}/blog/${id}`, {
         method: 'DELETE',
       });
       if (res.ok) {
