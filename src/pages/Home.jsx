@@ -11,6 +11,7 @@ import Mentors from '../components/Mentors';
 import CounselingHelp from '../components/CounselingHelp';
 import Events from '../components/Home/Events';
 import CallBackForm from '../components/Home/CallBackForm';
+import Tagline from '../components/Home/Tagline';
 
 const faqs = [
   {
@@ -104,6 +105,7 @@ const Home = () => {
         </section>
 
         {/* FAQ */}
+        <Tagline />
         {/* <section className="bg-gray-200 pb-20">
           <div className="container mx-auto px-6">
             <Accordion faqs={faqs} />

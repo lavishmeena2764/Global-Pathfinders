@@ -84,7 +84,7 @@ const WhyUs = () => {
                         </p>
                     </div>
                     <div className="image col-lg-5 my-auto">
-                        <img src="./images/enrolled-img3.jpg" alt="College" className="rounded-lg shadow-lg" />
+                        <img src="/images/enrolled-img3.jpg" alt="College" className="rounded-lg shadow-lg" />
                     </div>
                 </div>
 

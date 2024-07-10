@@ -4,13 +4,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const logos = [
-    './images/brand-logo/1.png',
-    './images/brand-logo/2.png',
-    './images/brand-logo/3.png',
-    './images/brand-logo/4.png',
-    './images/brand-logo/5.png',
-    './images/brand-logo/6.png',
-    './images/brand-logo/7.png',
+    '/images/brand-logo/1.png',
+    '/images/brand-logo/2.png',
+    '/images/brand-logo/3.png',
+    '/images/brand-logo/4.png',
+    '/images/brand-logo/5.png',
+    '/images/brand-logo/6.png',
+    '/images/brand-logo/7.png',
 ];
 
 const Logo = () => {

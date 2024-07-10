@@ -80,7 +80,7 @@ const Navbar = () => {
             <nav className={`w-full flex justify-between items-center h-24 mx-auto px-4 text-medBlue-200 bg-white ${isSticky ? 'fixed top-0 left-0 w-full z-20' : ''}`}>
                 <div className="flex items-center">
                     <a href='/'> <img
-                        src={`./images/logo.png`}
+                        src={`/images/logo.png`}
                         alt="Global Pathfinders"
                         width={250}
                         className="ml-1 lg:ml-10 "
@@ -141,7 +141,7 @@ const Navbar = () => {
                 >
                     <div className="flex">
                         <a href='/'> <img
-                            src={`./images/logo.png`}
+                            src={`/images/logo.png`}
                             alt=""
                             width={200}
                             className="m-3"

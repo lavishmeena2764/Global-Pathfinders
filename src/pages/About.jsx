@@ -44,7 +44,7 @@ const About = () => {
                 <section className="mb-36 grid gap-8 lg:grid-cols-2">
                     <div className="relative bg-white p-6 rounded-lg shadow-lg">
                         <img
-                            src="./images/mission.jpg"
+                            src="/images/mission.jpg"
                             alt="Mission"
                             className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-15"
                         />
@@ -57,7 +57,7 @@ const About = () => {
                     </div>
                     <div className="relative bg-white p-6 rounded-lg shadow-lg">
                         <img
-                            src="./images/vision.jpg"
+                            src="/images/vision.jpg"
                             alt="Mission"
                             className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-15"
                         />

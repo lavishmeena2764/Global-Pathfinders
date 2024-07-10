@@ -5,7 +5,6 @@ import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
-import BlogC from '../components/BlogC';
 
 
 
@@ -62,7 +61,6 @@ const ProgramsPage = (props) => {
             </a>
           </div>
 
-         <BlogC />
         </div>
         <Logo />
       </div>
