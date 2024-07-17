@@ -30,7 +30,7 @@ const Contact = () => {
         setFormStatus('submitting');
         console.log(formData)
         try {
-            const response = await fetch(`${process.env.BACKEND_URL}/contact`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

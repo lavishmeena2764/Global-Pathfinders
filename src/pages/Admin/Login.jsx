@@ -17,7 +17,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/login`, {
+      console.log("url : " + `${process.env.REACT_APP_BACKEND_URL}/login`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

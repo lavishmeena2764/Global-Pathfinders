@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 text-center border-t border-gray-700 pt-2 flex justify-evenly flex-wrap">
-                    <p>&copy; Copyright @ 2024 <a href="/#" className="text-white">Global Pathfinders</a>. All Right Reserved.</p> <p>Created by Lavish Meena</p>
+                    <p>&copy; Copyright @ 2024 <a href="/#" className="text-white">Global Pathfinders</a>. All Right Reserved.</p> <p>Created by <a href="https://linkedin.com/in/lavish-meena" className="text-white">Lavish Meena</a></p>
                 </div>
             </div>
         </footer>

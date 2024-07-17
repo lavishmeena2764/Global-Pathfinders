@@ -15,7 +15,7 @@ const ManageEvents = () => {
   useEffect(() => {
     // Simulate fetching data from the backend
     const fetchEvents = async () => {
-      const response = await fetch(`${process.env.BACKEND_URL}/event`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/event`);
       const data = await response.json();
       console.log(data.data);
       setEvents(data.data);
@@ -28,7 +28,7 @@ const ManageEvents = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this event?');
     if (confirmDelete) {
       try {
-        await axios.delete(`${process.env.BACKEND_URL}/event/${id}`);
+        await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/event/${id}`);
         setEvents(events.filter((event) => event.id !== id));
         window.location.reload();
       } catch (error) {
@@ -44,7 +44,7 @@ const ManageEvents = () => {
 
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`${process.env.BACKEND_URL}/event/update/${editEvent._id}`, editEvent);
+      const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/event/update/${editEvent._id}`, editEvent);
       const updatedEvent = res.data;
       // console.log("updated event",res.data)
       setEvents(events.map((event) => (event._id === updatedEvent._id ? updatedEvent : event)));

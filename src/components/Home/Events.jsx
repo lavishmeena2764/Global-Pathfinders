@@ -10,7 +10,7 @@ const EventsCarousel = () => {
     // Simulate fetching data from the backend
     try{
       const fetchEvents = async () => {
-        const response = await fetch(`${process.env.BACKEND_URL}/event`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/event`);
         const data = await response.json();
         console.log(data.data);
         setEvents(data.data);

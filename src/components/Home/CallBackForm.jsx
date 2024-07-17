@@ -17,7 +17,7 @@ const CallBackForm = () => {
     e.preventDefault();
     setFormStatus('submitting');
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/contact/callback`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/contact/callback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

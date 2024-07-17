@@ -50,7 +50,7 @@ const CreateBlog = () => {
     setIsLoading(true); // Show loader
     try {
       console.log('Submitting form data:', formData);
-      const resp = await axios.post(`${process.env.BACKEND_URL}/blog/upload`, formData, {
+      const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/blog/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
