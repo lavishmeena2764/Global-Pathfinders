@@ -49,9 +49,7 @@ function App() {
         <Route path='/programs/holistic-harmony' element={<ProgramsPage title1={title5} programData1={programData5} c1={c5} head1={head5} />} />
         <Route path="/admin" element={<Login />} />
         <Route path="/admin/home" element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
+          <PrivateRoute children={<Dashboard />} />
         }>
           <Route path="create-blog" element={<CreateBlog />} />
           <Route path="manage-blogs" element={<ManageBlogs />} />

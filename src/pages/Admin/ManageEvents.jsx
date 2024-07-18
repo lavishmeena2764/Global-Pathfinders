@@ -158,7 +158,7 @@ const ManageEvents = () => {
         </button>
       </div>
       <Modal
-       className='w-1/2 mx-auto bg-white p-8 px-16 mt-8'
+       className='w-1/2 mx-auto bg-white p-8 px-16 mt-2'
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         contentLabel="Edit Event"
@@ -192,7 +192,7 @@ const ManageEvents = () => {
             <textarea
               className="w-full border rounded px-3 py-2"
               id="desc"
-              name="description"
+              name="caption"
               value={editEvent.caption}
               onChange={handleChange}
             />

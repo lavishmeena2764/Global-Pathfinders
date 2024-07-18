@@ -64,7 +64,7 @@ const BlogTemp = () => {
           <img src={blog.img} alt={blog.title} className="w-full ml-3 object-cover rounded mb-4" />
           <h1 className="text-4xl font-bold ml-2 mb-4 text-indigo-900">{blog.title}</h1>
           <div className=''><div className="text-gray-700 mb-4 ql-editor" style={{lineHeight:'40px'}} dangerouslySetInnerHTML={{ __html: blog.body }}></div></div>
-          <button className="px-4 py-2 text-lg bg-blue-500 text-white rounded hover:bg-blue-700">Consult Now</button>
+          <a href="/contact"><button className="px-4 py-2 text-lg bg-blue-500 text-white rounded hover:bg-blue-700">Consult Now</button></a>
         </div>
         <div className="w-full lg:w-1/3 lg:ml-6 bg-white rounded shadow p-4 border border-gray-300 h-fit sticky top-0">
           <div className='mx-12'>
