@@ -40,7 +40,7 @@ const Blogs = () => {
       <Navbar />
       <PageHeader title="Blogs" />
       <h1 className="text-6xl font-bold my-12 text-indigo-900 text-center">Latest Blogs</h1>
-      <div className="container p-6 bg-gray-100 min-h-screen">
+      <div className="container bg-gray-100 min-h-screen p-24">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {currentBlogs.map((blog) => (
             <a href={`/blog/${blog.titleHash}`} key={blog.id} className="hover:no-underline">

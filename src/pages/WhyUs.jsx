@@ -57,8 +57,8 @@ const WhyUs = () => {
             <Navbar />
             <PageHeader title="Why Us" />
             
-            <div className="container mx-auto p-8">
-                <div className="row gap-5 my-24">
+            <div className="container mx-auto p-8 pt-0"  style={{transform:"scale(0.95)"}}>
+                <div className="row gap-5 mb-24">
                     <div className="text col-lg-6">
                         <h1 className="text-4xl font-bold mb-4 text-indigo-900">We are a trusted international Education consultancy.</h1>
                         <p className="text-lg text-gray-700">

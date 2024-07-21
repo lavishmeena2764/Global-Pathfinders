@@ -12,7 +12,7 @@ const About = () => {
         <>
             <Navbar />
             <PageHeader title="About" />
-            <div className="container mx-auto p-6">
+            <div className="container mx-auto p-6" style={{transform:"scale(0.96)"}}>
 
                 <section className="mb-24 text-left">
                     <div className='text-center'>
@@ -62,9 +62,9 @@ const About = () => {
                             className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-15"
                         />
                         <div className="relative z-10 p-4">
-                            <h2 className="text-3xl font-bold mb-4 text-gray-700">Our Mission</h2>
+                            <h2 className="text-3xl font-bold mb-4 text-gray-700">Our Values</h2>
                             <p className="text-lg">
-                                To enable college aspirants to identify their interests and goals, pursue a strategic activity plan, and navigate the application and interview process seamlessly. Our goal: to secure admission into colleges that perfectly align with students’ aptitude, interests, and career aspirations.
+                                Trust matters when it comes to shaping your future. That's why our global team of top-tier education consultants is committed to delivering nothing but the best. With honesty, reliability, and unbiased expertise, we provide personalized guidance tailored to meet every student’s unique needs.
                             </p>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { PrevArrow, NextArrow } from './CustomArrow';
 const Carousel = () => {
     const cards = [
         {
@@ -46,6 +46,9 @@ const Carousel = () => {
         autoplaySpeed: 2000,
         pauseOnHover: true,
         slidesToScroll: 1,
+	arrows: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
 
             {
@@ -64,7 +67,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="testimonial-slider-container mb-12">
+        <div className="testimonial-slider-container mb-12" style={{transform:"scale(0.9)"}} >
             <h2 className="text-5xl text-gray-700 font-bold text-center mb-8">Our Programs</h2>
 
             <Slider {...settings}>

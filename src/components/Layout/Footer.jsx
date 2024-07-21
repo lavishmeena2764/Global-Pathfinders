@@ -12,7 +12,7 @@ const Footer = () => {
                         <h2 className="text-left text-3xl font-bold mb-4">Address</h2>
                         <div className='text-left text-lg leading-8'>
                             <p><FontAwesomeIcon icon={faLocationDot} /> Global Pathfinders</p>
-                            <p>Delhi, India (335001)</p>
+                            <p>204-205, 2nd Floor Aggarwal Bhawan, Building Number 35-36, Nehru Place, New Delhi (110019)</p>
                         </div>
                     </div>
                     <div>

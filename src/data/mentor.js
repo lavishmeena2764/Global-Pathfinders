@@ -61,7 +61,7 @@ const mentors = [
           id: "d.agrawal3@lse.ac.uk",
           uni: "London School of Economics and Political Science (LSE)",
           linkedin: "https:\/\/www.linkedin.com\/in\/divyansh22",
-          bio: "I'm Divyansh, a proactive ndividual with a zeal for financial markets and an entrepreneurial slant. Always looking forward to passing down the torch of innovation to the high school community.",
+          bio: "I'm Divyansh, a proactive individual with a zeal for financial markets and an entrepreneurial slant. Always looking forward to passing down the torch of innovation to the high school community.",
           img: "/images/mentors/da.jpg"
      },
      {

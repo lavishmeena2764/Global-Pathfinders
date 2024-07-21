@@ -8,6 +8,7 @@ import mentors from '../data/mentor';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { PrevArrow, NextArrow } from './CustomArrow';
 
 const Mentors = () => {
     const settings = {
@@ -22,8 +23,8 @@ const Mentors = () => {
         centerMode: true,
         centerPadding: '0px',
         arrows: true,
-        nextArrow: <FaArrowRight />,
-        prevArrow: <FaArrowLeft />,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1200,
@@ -47,7 +48,7 @@ const Mentors = () => {
     };
 
     return (
-        <div className="testimonial-slider-container mb-12">
+        <div className="testimonial-slider-container mb-12" style={{transform:"scale(0.9)"}} >
             <h2 className="text-5xl text-gray-700 font-bold text-center mb-16">Word from our Mentors</h2>
 
             <Slider {...settings}>

@@ -13,18 +13,6 @@ import Events from '../components/Home/Events';
 import CallBackForm from '../components/Home/CallBackForm';
 import Tagline from '../components/Home/Tagline';
 
-const faqs = [
-  {
-    question: 'What is the cost of your counseling services?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    question: 'How can I schedule a counseling session?',
-    answer: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-  },
-  // Add more FAQ items as needed
-];
-
 const Home = () => {
   // State for dynamic numerical data
   const [collegesCount, setCollegesCount] = useState(0);
@@ -70,7 +58,7 @@ const Home = () => {
 
                 Your story helps you communicate who you are, your values and why you are a good fit for the institutions to which you are applying. Your narrative can help you engage an admissions officer, establish a connection and ultimately inspire them to advocate on your behalf. <br /> <br />
 
-                As you start your journey with Global Pathfinders, we serve as a trusted adviser company to help you become more familiar with your gifts and passions. As we work together, you will be an expert at articulating what motivates you, your strengths and weaknesses and how to describe yourself in a way that allows you to become more than another file. These storytelling skills are critical in the college admissions process; these are life skills that will help you long after college.The college process is also a time for maturation, self-discovery, learning and fun. We encourage teens to embrace activities and courses that reflect who they genuinely are, not who they think colleges want them to be. <br /> <br />
+                As you start your journey with Global Pathfinders, we serve as a trusted adviser company to help you become more familiar with your gifts and passions. As we work together, you will be an expert at articulating what motivates you, your strengths and weaknesses and how to describe yourself in a way that allows you to become more than another file. These storytelling skills are critical in the college admissions process; these are life skills that will help you long after college. The college process is also a time for maturation, self-discovery, learning and fun. We encourage teens to embrace activities and courses that reflect who they genuinely are, not who they think colleges want them to be. <br /> <br />
               </p>
             </div>
             {/* Request a Call Back */}

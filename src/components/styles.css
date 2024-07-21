@@ -102,6 +102,9 @@
 @media screen and (min-width:760px) {
     .divHeight {
         height: 500px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
     }
 
     .photo {
@@ -123,7 +126,8 @@
 
 @media screen and (min-width:1024px) {
     .divHeight {
-        height: 400px;
+        height: 500px;
+	width: 60%;
     }
 
     .photo {
@@ -131,7 +135,7 @@
     }
 
     .program-card {
-        height: 500px;
+        height: 600px;
     }
 
     .content {
@@ -144,13 +148,20 @@
         font-size: 3rem;
     }
 }
-
+@media screen and (min-width: 1200px) {
+    .divHeight{
+	width: 100%;
+	height: 600px;
+    }
+}
 @media screen and (min-width:1500px) {
     .divHeight {
         height: 600px;
     }
+    .program-card {
+	height:550px;
+    }
 }
-
 .gradient {
     background-image: linear-gradient(to right, #4755690a, #9d0cb28a, #4343c899, #4755690a);
     width: 50%;
