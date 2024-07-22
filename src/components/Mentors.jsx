@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaQuoteLeft } from 'react-icons/fa';
 import './styles.css'; // Custom CSS for additional styling
 import mentors from '../data/mentor';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -68,9 +68,9 @@ const Mentors = () => {
                                 <span className="designation">{mentor.uni}</span>
                             </div>
                             <div className='flex flex-row justify-between'>
-                                <a href={mentor.phone}><FontAwesomeIcon className="mx-2" icon={faPhone} size="lg" /></a>
+                                <a href={`tel:${mentor.phone}`}><FontAwesomeIcon className="mx-2" icon={faPhone} size="lg" /></a>
                                 <a href={mentor.linkedin}><FontAwesomeIcon className="mx-2" icon={faLinkedin} size="lg" /></a>
-                                <a href={mentor.email}><FontAwesomeIcon className="mx-2" icon={faEnvelope} size="lg" /></a>
+                                <a href={`mailto:${mentor.email}`}><FontAwesomeIcon className="mx-2" icon={faEnvelope} size="lg" /></a>
                             </div>
                         </div>
                     </div>

@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
 import PageHeader from '../components/Layout/PageHeader';
-import { FaCheck, FaCircle } from 'react-icons/fa6';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const Contact = () => {

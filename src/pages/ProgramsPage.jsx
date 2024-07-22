@@ -1,6 +1,6 @@
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';

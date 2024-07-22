@@ -49,7 +49,7 @@ const StudyInUSA = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 max-w-screen-lg mx-auto">
+                    <div className="text-center mb-10 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Are you considering pursuing your higher education in the United States?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                         Your journey towards excellence and a world of opportunities begins right here! The United States is celebrated for its prestigious universities, advanced research facilities, and inclusive learning environments that embrace diversity. By choosing to study in the USA, you unlock a multitude of opportunities for academic, professional, and personal growth. With access to top-ranked institutions and cutting-edge technology, you’ll gain valuable skills and experiences that prepare you for a successful future. Moreover, the rich cultural environment and extensive networking opportunities enhance your global perspective and career prospects. Studying in the USA is not just about education; it’s about opening doors to endless possibilities and shaping your future.Here are some compelling reasons why studying in the USA should be at the top of your list:

@@ -1,5 +1,3 @@
-import { faBuildingColumns, faCircle, faGraduationCap, faUser, faUsers } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import CountUp from 'react-countup';
 import { TbFlagStar } from "react-icons/tb";

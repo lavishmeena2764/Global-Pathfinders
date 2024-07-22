@@ -6,7 +6,6 @@ import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
-import { FaCircleCheck } from 'react-icons/fa6';
 
 const faqs = [
     {
@@ -40,7 +39,7 @@ const StudyInUK = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 max-w-screen-lg mx-auto">
+                    <div className="text-center mb-10 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Are you considering pursuing higher education in the United Kingdom?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                             The UK is renowned for its prestigious, and reputed institutions that promise to deliver only the best. While its population making up only 1% of the globe, it’s responsible for almost 8% of academic publications. If you are fascinated by the English culture, or want to experience life in the Scottish Highlands as you study towards a degree then this might be the destination for you. Beyond all that, here are some reasons why studying in the UK should be on your list:

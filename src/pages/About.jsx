@@ -3,20 +3,18 @@ import Team from '../components/About/Team';
 import Footer from '../components/Layout/Footer';
 import Navbar from '../components/Layout/Navbar';
 import Logo from '../components/Logo';
-// import Testimonials from '../components/Testimonials';
 import PageHeader from '../components/Layout/PageHeader';
 import './styles.css';
 import Tagline from '../components/Home/Tagline';
-import CounselingHelp from '../components/CounselingHelp';
-import { FaChalkboardTeacher, FaDollarSign, FaGlobe, FaGraduationCap, FaHandsHelping, FaLifeRing, FaUniversity } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaDollarSign, FaGlobe, FaGraduationCap, FaLifeRing, FaUniversity } from 'react-icons/fa';
 
 const items = [
-    { icon: <FaGraduationCap className="mx-auto h-12 w-12 text-blue-500" />, description: 'Trusted expertise and experience in the field'},
-    { icon: <FaUniversity className="mx-auto h-12 w-12 text-blue-500" />, description: 'Proven success in placing students in prestigious universities'},
-    { icon: <FaGlobe className="mx-auto h-12 w-12 text-blue-500" />, description: 'Extensive network of global university partnerships'},
-    { icon: <FaChalkboardTeacher className="mx-auto h-12 w-12 text-blue-500" />, description: 'Personalized guidance for a seamless application process'},
-    { icon: <FaDollarSign className="mx-auto h-12 w-12 text-blue-500" />, description: 'Insights into scholarship opportunities for international students'},
-    { icon: <FaLifeRing className="mx-auto h-12 w-12 text-blue-500" />, description: 'Ongoing support and assistance at every step of your journey'},
+    { icon: <FaGraduationCap className="mx-auto h-12 w-12 text-blue-500" />, description: 'Trusted expertise and experience in the field' },
+    { icon: <FaUniversity className="mx-auto h-12 w-12 text-blue-500" />, description: 'Proven success in placing students in prestigious universities' },
+    { icon: <FaGlobe className="mx-auto h-12 w-12 text-blue-500" />, description: 'Extensive network of global university partnerships' },
+    { icon: <FaChalkboardTeacher className="mx-auto h-12 w-12 text-blue-500" />, description: 'Personalized guidance for a seamless application process' },
+    { icon: <FaDollarSign className="mx-auto h-12 w-12 text-blue-500" />, description: 'Insights into scholarship opportunities for international students' },
+    { icon: <FaLifeRing className="mx-auto h-12 w-12 text-blue-500" />, description: 'Ongoing support and assistance at every step of your journey' },
 ];
 const About = () => {
     return (
@@ -29,7 +27,7 @@ const About = () => {
                     <div className='text-center'>
                         <h1 className="text-5xl text-gray-700 font-bold text-center mb-8">We help you get into your best fit university</h1>
                         <p className="text-xl mx-auto mb-8 max-w-screen-xl">
-                        We take immense pride in our proven track record of successfully placing numerous international students into some of the most renowned universities across the globe. Our commitment to excellence is reflected in the quality of our expert guidance and the strength of our extensive network, which together ensure that your academic journey is directed towards the doors of prestigious institutions. At our consultancy, we offer more than just traditional counseling services. We are deeply passionate about shaping the future of young minds by nurturing their unique talents and providing them with the comprehensive tools and resources they need to excel. Our dedicated team works tirelessly to support each student’s aspirations, ensuring they are well-prepared to thrive in their chosen academic and professional paths. With us, you’re not just receiving guidance—you’re gaining a partner in achieving your dreams and unlocking a world of opportunities.
+                            We take immense pride in our proven track record of successfully placing numerous international students into some of the most renowned universities across the globe. Our commitment to excellence is reflected in the quality of our expert guidance and the strength of our extensive network, which together ensure that your academic journey is directed towards the doors of prestigious institutions. At our consultancy, we offer more than just traditional counseling services. We are deeply passionate about shaping the future of young minds by nurturing their unique talents and providing them with the comprehensive tools and resources they need to excel. Our dedicated team works tirelessly to support each student’s aspirations, ensuring they are well-prepared to thrive in their chosen academic and professional paths. With us, you’re not just receiving guidance—you’re gaining a partner in achieving your dreams and unlocking a world of opportunities.
 
 
 
@@ -58,30 +56,6 @@ const About = () => {
                             </div>
                         </section>
 
-
-
-                        {/* <RequirementCard
-                                title="Why Choose Us?"
-                                items={[
-                                    'Trusted expertise and experience in the field',
-                                    'Proven success in placing students in prestigious universities',
-                                    'Comprehensive support tailored to your unique needs',
-                                    'Extensive network of global university partnerships',
-                                    'Personalized guidance for a seamless application process',
-                                    'Insights into scholarship opportunities for international students',
-                                    'Ongoing support and assistance at every step of your journey',
-                                ]}
-                            /> */}
-                        {/* <h1 className="text-4xl font-bold mb-4 text-gray-700">Why Choose Us?</h1>
-                        <ul className="text-lg mx-4 list-disc">
-                            <li>Trusted expertise and experience in the field</li>
-                            <li>Proven success in placing students in prestigious universities</li>
-                            <li>Comprehensive support tailored to your unique needs</li>
-                            <li>Extensive network of global university partnerships</li>
-                            <li>Personalized guidance for a seamless application process</li>
-                            <li>Insights into scholarship opportunities for international students</li>
-                            <li>Ongoing support and assistance at every step of your journey</li>
-                        </ul> */}
                     </div>
                 </section>
 
@@ -114,8 +88,9 @@ const About = () => {
                     </div>
                 </section>
                 <Team />
-                {/* <Testimonials /> */}
+                
                 <div className='h-16'></div>
+                
                 <Tagline />
 
                 <Logo />
@@ -125,19 +100,6 @@ const About = () => {
 
             <Footer />
         </>
-    );
-};
-
-const RequirementCard = ({ title, items }) => {
-    return (
-        <div className="bg-white shadow-lg rounded-lg p-6 w-fit mx-auto px-12">
-            <h3 className="text-3xl font-bold text-gray-800 mb-2">{title}</h3>
-            <ul className="list-disc list-inside text-lg text-gray-600">
-                {items.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
-        </div>
     );
 };
 

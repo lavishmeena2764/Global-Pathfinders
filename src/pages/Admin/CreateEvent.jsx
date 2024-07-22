@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FileInput, Spinner, Alert } from 'flowbite-react';
+import { Button, Spinner, Alert } from 'flowbite-react';
 import axios from 'axios';
 
 const CreateEvent = () => {
@@ -26,8 +26,12 @@ const CreateEvent = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      alert('Event uploaded Successfully');
-      window.location.reload();
+      if(data.event){ 
+        alert('Event uploaded Successfully');
+        window.location.reload();
+      } else {
+        alert("Error Publishing Event at the moment. \nPlease try after some time");
+      }
     } catch (error) {
       setPublishError('Error creating event. Please try again later.');
       console.error('Error creating event:', error);
@@ -62,7 +66,7 @@ const CreateEvent = () => {
             </div>
             {imagePreview && (
               <div className="mt-4">
-                <img src={imagePreview} alt="Image Preview" className="w-full h-auto rounded" />
+                <img src={imagePreview} alt="Upload Preview" className="w-full h-auto rounded" />
               </div>
             )}
           </div>

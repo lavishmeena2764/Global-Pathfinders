@@ -1,8 +1,7 @@
 // pages/Home.js
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CarouselMain from '../components/CarouselMain';
 import VideoPlayer from '../components/VideoPlayer';
-import Accordion from '../components/Accordian';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import Stats from '../components/Stats';
@@ -16,27 +15,6 @@ import Tagline from '../components/Home/Tagline';
 import { AcademicCapIcon, BriefcaseIcon, ClipboardListIcon, DocumentTextIcon, CashIcon, ChatIcon, BellIcon, UserGroupIcon, ClipboardCheckIcon } from '@heroicons/react/outline';
 
 const Home = () => {
-  // State for dynamic numerical data
-  const [collegesCount, setCollegesCount] = useState(0);
-  const [studentsCount, setStudentsCount] = useState(0);
-  const [expertsCount, setExpertsCount] = useState(0);
-  const [satisfactionRate, setSatisfactionRate] = useState(0);
-
-  // Simulate incrementing numerical data on reload
-  useEffect(() => {
-    // Simulate API call to fetch actual data
-    const fetchNumericalData = () => {
-      // Replace with actual API call logic if needed
-      setTimeout(() => {
-        setCollegesCount(100);
-        setStudentsCount(200);
-        setExpertsCount(50);
-        setSatisfactionRate(100);
-      }, 1500); // Adjust timing as needed
-    };
-
-    fetchNumericalData();
-  }, []);
 
   return (
     <div className='bg-gray-100'>

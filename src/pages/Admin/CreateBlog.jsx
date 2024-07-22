@@ -93,7 +93,7 @@ const CreateBlog = () => {
             </div>
             {imagePreview && (
               <div className="mt-4">
-                <img src={imagePreview} alt="Image Preview" className="w-full h-auto rounded" />
+                <img src={imagePreview} alt="Upload Preview" className="w-full h-auto rounded" />
               </div>
             )}
           </div>

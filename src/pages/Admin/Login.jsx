@@ -10,14 +10,13 @@ const Login = () => {
       }
     }
     checkLogin();
-  }, [])
+  })
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("url : " + `${process.env.REACT_APP_BACKEND_URL}/login`);
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`, {
         method: 'POST',
         headers: {

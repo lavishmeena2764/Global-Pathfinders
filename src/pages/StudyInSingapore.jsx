@@ -32,7 +32,7 @@ const StudyInSingapore = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 max-w-screen-lg mx-auto">
+                    <div className="text-center mb-10 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Considering Studying in Singapore?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                         Singapore offers an exceptional blend of academic excellence, promising career opportunities, and global recognition. Its world-class universities are known for their rigorous programs and innovative research, setting the stage for a high-quality education. The city-state’s thriving economy and diverse industries provide ample internship and job prospects, enhancing your career potential. Degrees from Singaporean institutions are highly regarded worldwide, opening doors to international opportunities. Additionally, Singapore’s modern and vibrant environment, combined with its rich cultural tapestry, ensures a unique and enriching experience. Consider Singapore for a well-rounded and globally recognized educational journey.

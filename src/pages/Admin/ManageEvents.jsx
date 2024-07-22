@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
-// import event from '../../data/event';
-import { Button } from 'flowbite-react';
 
 const ManageEvents = () => {
   const [events, setEvents] = useState([]);
