@@ -49,7 +49,7 @@ const StudyInUSA = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 mx-auto">
+                    <div className="text-center mb-24 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Are you considering pursuing your higher education in the United States?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                         Your journey towards excellence and a world of opportunities begins right here! The United States is celebrated for its prestigious universities, advanced research facilities, and inclusive learning environments that embrace diversity. By choosing to study in the USA, you unlock a multitude of opportunities for academic, professional, and personal growth. With access to top-ranked institutions and cutting-edge technology, you’ll gain valuable skills and experiences that prepare you for a successful future. Moreover, the rich cultural environment and extensive networking opportunities enhance your global perspective and career prospects. Studying in the USA is not just about education; it’s about opening doors to endless possibilities and shaping your future.Here are some compelling reasons why studying in the USA should be at the top of your list:
@@ -57,7 +57,7 @@ const StudyInUSA = () => {
                     </div>
 
                     {/* Reasons to Study in the USA */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">Why Choose to Study in the USA?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <ReasonCard
@@ -94,7 +94,7 @@ const StudyInUSA = () => {
                     </div>
 
                     {/* Requirements */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">Requirements for Admission</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <RequirementCard
@@ -124,7 +124,7 @@ const StudyInUSA = () => {
 
                     <Accordion faqs={faqs} />
 
-                    <div className="text-left my-10">
+                    <div className="text-left my-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">The Global Pathfinders Edge</h2>
                         <p className="text-xl text-gray-600 mb-8">
                             <PersonalStatementCard

@@ -6,6 +6,7 @@ import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const faqs = [
     {
@@ -39,7 +40,7 @@ const StudyInUK = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 mx-auto">
+                    <div className="text-center mb-24 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Are you considering pursuing higher education in the United Kingdom?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                             The UK is renowned for its prestigious, and reputed institutions that promise to deliver only the best. While its population making up only 1% of the globe, it’s responsible for almost 8% of academic publications. If you are fascinated by the English culture, or want to experience life in the Scottish Highlands as you study towards a degree then this might be the destination for you. Beyond all that, here are some reasons why studying in the UK should be on your list:
@@ -47,7 +48,7 @@ const StudyInUK = () => {
                     </div>
 
                     {/* Reasons to Study in the UK */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose to Study in the UK?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <ReasonCard
@@ -79,7 +80,7 @@ const StudyInUK = () => {
                     </div>
 
                     {/* Requirements */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Requirements for Admission</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <RequirementCard
@@ -106,6 +107,13 @@ const StudyInUK = () => {
                     </div>
 
                     <Accordion faqs={faqs} />
+
+                    <a href='/contact' className='hover:no-underline'>
+                        <button className="mt-8 px-6 py-3 bg-blue-500 mx-auto text-gray-50 font-semibold rounded-md flex items-center hover:bg-blue-600 hover:text-white transition duration-300">
+                            Consult Now
+                            <FaCalendarAlt className="ml-2" />
+                        </button>
+                    </a>
                 </div>
             </div>
             <Logo />

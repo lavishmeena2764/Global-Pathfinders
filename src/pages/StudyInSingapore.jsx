@@ -7,6 +7,7 @@ import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
 import { FaCircleCheck } from 'react-icons/fa6';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const faqs = [
     {
@@ -32,7 +33,7 @@ const StudyInSingapore = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10 mx-auto">
+                    <div className="text-center mb-24 mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Considering Studying in Singapore?</h1>
                         <p className="text-lg text-gray-600 mb-8">
                         Singapore offers an exceptional blend of academic excellence, promising career opportunities, and global recognition. Its world-class universities are known for their rigorous programs and innovative research, setting the stage for a high-quality education. The city-state’s thriving economy and diverse industries provide ample internship and job prospects, enhancing your career potential. Degrees from Singaporean institutions are highly regarded worldwide, opening doors to international opportunities. Additionally, Singapore’s modern and vibrant environment, combined with its rich cultural tapestry, ensures a unique and enriching experience. Consider Singapore for a well-rounded and globally recognized educational journey.
@@ -40,7 +41,7 @@ const StudyInSingapore = () => {
                     </div>
 
                     {/* Reasons to Study in Singapore */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose to Study in Singapore?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <ReasonCard
@@ -72,7 +73,7 @@ const StudyInSingapore = () => {
                     </div>
 
                     {/* Requirements */}
-                    <div className="mb-10">
+                    <div className="mb-24">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Requirements for Admission</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <RequirementCard
@@ -100,7 +101,7 @@ const StudyInSingapore = () => {
 
 
                     {/* Personal Statement Requirements */}
-                    <div className='mb-16'>
+                    <div className='mb-24'>
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Personal Statement Requirements</h2>
                         <div className="space-y-6">
                             <PersonalStatementCard
@@ -131,6 +132,13 @@ const StudyInSingapore = () => {
                     </div>
 
                     <Accordion faqs={faqs} />
+
+                    <a href='/contact' className='hover:no-underline'>
+                        <button className="mt-8 px-6 py-3 bg-blue-500 mx-auto text-gray-50 font-semibold rounded-md flex items-center hover:bg-blue-600 hover:text-white transition duration-300">
+                            Consult Now
+                            <FaCalendarAlt className="ml-2" />
+                        </button>
+                    </a>
                 </div>
             </div>
             <Logo />
