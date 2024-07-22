@@ -37,6 +37,6 @@ const programData2 = [
 
 const c2 = "We offer comprehensive support throughout the application process, from finalizing your college list to interview preparation and supplementary portfolio development, ensuring your application stands out."
 const title2 = "Application Services: Maximizing Your Admissions Potential"
-const head2 = "Application Services: Maximizing Your Admissions Potential"
+const head2 = "Enhancing Your Admissions Prospects to the Fullest"
 
 export {programData2, c2, title2, head2};

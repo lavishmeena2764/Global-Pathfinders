@@ -29,11 +29,11 @@ const ProgramsPage = (props) => {
     <>
       <Navbar />
       <PageHeader title={props.title1} />
-      <div className="bg-gray-100 py-12">
+      <div className="bg-gray-100 p-12">
         <div className="container mx-auto px-4">
           <section className="mb-12 text-center">
             <h2 className="text-4xl font-bold mb-4 text-indigo-900">{props.head1}</h2>
-            <p className="text-lg mb-4">
+            <p className="text-lg mb-4 max-w-screen-lg mx-auto">
               {props.c1}
             </p>
           </section>

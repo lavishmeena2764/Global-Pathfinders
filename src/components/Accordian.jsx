@@ -13,7 +13,7 @@ const Accordion = (props) => {
 
   return (
     <div className="accordion">
-      <h2 className="text-3xl font-bold mb-4 text-indigo-900">FAQs</h2>
+      <h2 className="text-3xl font-bold mb-4 text-indigo-900">Frequently Asked Questions</h2>
       {props.faqs.map((faq, index) => (
         <div key={index} className="mb-4">
           <button

@@ -177,7 +177,7 @@
 
 .parallax {
     position: relative;
-    background: url('../../public/images/contact.png') no-repeat center center fixed;
+    background: url('../../public/images/bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 16rem;
     display: flex;

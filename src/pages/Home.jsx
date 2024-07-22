@@ -13,6 +13,8 @@ import Events from '../components/Home/Events';
 import CallBackForm from '../components/Home/CallBackForm';
 import Tagline from '../components/Home/Tagline';
 
+import { AcademicCapIcon, BriefcaseIcon, ClipboardListIcon, DocumentTextIcon, CashIcon, ChatIcon, BellIcon, UserGroupIcon, ClipboardCheckIcon } from '@heroicons/react/outline';
+
 const Home = () => {
   // State for dynamic numerical data
   const [collegesCount, setCollegesCount] = useState(0);
@@ -52,8 +54,8 @@ const Home = () => {
           <div className="flex flex-row mx-auto px-2 flex-wrap">
             {/* Importance of Telling your story */}
             <div className="max-w-4xl mx-auto text-left mb-16 px-4">
-              <h2 className="text-5xl text-gray-700 font-bold text-left mb-8">The Importance of Telling Your Story</h2>
-              <p className="text-lg text-gray-700 text-left">
+              <h2 className="text-5xl text-gray-700 font-bold text-left mb-12">The Importance of Telling Your Story</h2>
+              <p className="text-lg text-gray-700 text-left leading-9">
                 Your college application should do much more than just document your GPA and standardized test score. It should tell your story. Admissions counsellors want to be able to picture a student on their campus and know that they will thrive. Just as important, they want to understand what makes you different from every other application that will cross their desk. <br /><br />
 
                 Your story helps you communicate who you are, your values and why you are a good fit for the institutions to which you are applying. Your narrative can help you engage an admissions officer, establish a connection and ultimately inspire them to advocate on your behalf. <br /> <br />
@@ -82,7 +84,7 @@ const Home = () => {
         </section>
 
         {/* Counselling Help */}
-        <CounselingHelp />
+        <CounselingHelp services={services} head="How will Counselling Help" text="By syncing their personality, aptitude, and passion with their career path, Global Pathfinders can help align a student's strengths and interests with their college and course choices." />
 
         {/* Stats */}
         <Stats />
@@ -91,9 +93,11 @@ const Home = () => {
         <section className="bg-gray-200 py-20 px-10">
           <Mentors />
         </section>
+        <section className="bg-gray-200">
+          <Tagline />
+        </section>
 
         {/* FAQ */}
-        <Tagline />
         {/* <section className="bg-gray-200 pb-20">
           <div className="container mx-auto px-6">
             <Accordion faqs={faqs} />
@@ -110,5 +114,18 @@ const Home = () => {
     </div>
   );
 };
+
+const services = [
+  { icon: <AcademicCapIcon className="h-6 w-6 text-blue-500" />, title: "360 Career Counselling", description: "One on one college counselling" },
+  { icon: <BriefcaseIcon className="h-6 w-6 text-green-500" />, title: "University Selection", description: "Helping you choose the right university" },
+  { icon: <ClipboardListIcon className="h-6 w-6 text-red-500" />, title: "Profile Building", description: "Your Road Map/story" },
+  { icon: <DocumentTextIcon className="h-6 w-6 text-yellow-500" />, title: "SOPS | LORS | Resumes", description: "Assistance with essential documents" },
+  { icon: <CashIcon className="h-6 w-6 text-purple-500" />, title: "Scholarships Guidance", description: "Helping you secure scholarships" },
+  { icon: <ChatIcon className="h-6 w-6 text-indigo-500" />, title: "Interview Preparation", description: "Get ready for your interviews" },
+  { icon: <BellIcon className="h-6 w-6 text-pink-500" />, title: "Weekly Task Reminder", description: "For Students and Parents" },
+  { icon: <UserGroupIcon className="h-6 w-6 text-orange-500" />, title: "Future Career Guidance", description: "Explore career options" },
+  { icon: <ClipboardCheckIcon className="h-6 w-6 text-teal-500" />, title: "Full Application Assistance", description: "Help with editing and submitting College Applications (Common App)" },
+];
+
 
 export default Home;

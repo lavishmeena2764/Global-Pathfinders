@@ -35,6 +35,6 @@ const programData5 = [
 
 const c5 = "We help you balance academics and personal life, develop time management skills, explore genuine interests, set long-term goals, manage stress, and build leadership abilities for a successful college experience."
 const title5 = "Holistic Harmony: Nurturing the Whole You"
-const head5 = "Holistic Harmony: Nurturing the Whole You"
+const head5 = "Supporting Your Holistic Growth and Well-being"
 
 export {programData5, c5, title5, head5};

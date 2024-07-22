@@ -33,8 +33,8 @@ const programData4 = [
   }
 ];
 
-const c4 = "After receiving college acceptances, we assist with decision-making, financial aid review, and preparation for your college journey to ensure you make the right choice and are well-prepared."
+const c4 = "After receiving college acceptances, we provide comprehensive support to help you navigate the crucial decision-making process. Our team assists with reviewing financial aid packages, comparing the pros and cons of each institution, and preparing you for the college journey ahead. We ensure you make an informed and confident choice, equipping you with all the necessary resources and guidance to be well-prepared for your future academic endeavors. Our goal is to make this transition as smooth and successful as possible, setting you up for a fulfilling and rewarding college experience."
 const title4 = "Post-Acceptance Guidance: Making the Right Choice"
-const head4 = "Post-Acceptance Guidance: Making the Right Choice"
+const head4 = "How we help you make the right choice?"
 
 export {programData4, c4, title4, head4};

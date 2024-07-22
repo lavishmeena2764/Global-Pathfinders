@@ -41,6 +41,6 @@ const programData1 = [
 
 const c1 = "We help identify and nurture your unique strengths, transforming them into powerful assets for your college application. This includes academic rigor, test preparation guidance, and extracurricular development."
 const title1 = "Profile Building: Crafting Your Unique Masterpiece"
-const head1 = "Profile Building: Crafting Your Unique Masterpiece"
+const head1 = "Guiding You in Crafting Your Unique Masterpiece"
 
 export {programData1, c1, title1, head1};

@@ -29,6 +29,6 @@ const programData3 = [
 
 const c3 = "Our essay support helps you create standout essays that reflect your unique voice. We guide you through topic selection, writing process, and provide detailed feedback to make your essays impactful."
 const title3 = "Essay Services: Your Story, Your Way"
-const head3 = "Essay Services: Your Story, Your Way"
+const head3 = "Helping You Share Your Story in Your Own Words"
 
 export {programData3, c3, title3, head3};

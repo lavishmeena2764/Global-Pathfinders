@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserGraduate, faGraduationCap, faClipboardList, faFileAlt, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate, faGraduationCap, faClipboardList, faFileAlt, faGlobe, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import Accordion from '../components/Accordian';
 import Footer from '../components/Layout/Footer';
 import Logo from '../components/Logo';
 import Navbar from '../components/Layout/Navbar';
 import PageHeader from '../components/Layout/PageHeader';
 import { FaCircleCheck } from 'react-icons/fa6';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const faqs = [
     {
@@ -48,16 +49,16 @@ const StudyInUSA = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
-                    <div className="text-center mb-10">
+                    <div className="text-center mb-10 max-w-screen-lg mx-auto">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Are you considering pursuing your higher education in the United States?</h1>
                         <p className="text-lg text-gray-600 mb-8">
-                            Your journey towards excellence and a world of opportunities starts here! The United States is widely recognized for its universities, state-of-the-art research facilities, and an inclusive learning environment that celebrates diversity. Here are some reasons why studying in the USA should be on your radar:
+                        Your journey towards excellence and a world of opportunities begins right here! The United States is celebrated for its prestigious universities, advanced research facilities, and inclusive learning environments that embrace diversity. By choosing to study in the USA, you unlock a multitude of opportunities for academic, professional, and personal growth. With access to top-ranked institutions and cutting-edge technology, you’ll gain valuable skills and experiences that prepare you for a successful future. Moreover, the rich cultural environment and extensive networking opportunities enhance your global perspective and career prospects. Studying in the USA is not just about education; it’s about opening doors to endless possibilities and shaping your future.Here are some compelling reasons why studying in the USA should be at the top of your list:
                         </p>
                     </div>
 
                     {/* Reasons to Study in the USA */}
                     <div className="mb-10">
-                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose to Study in the USA?</h2>
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">Why Choose to Study in the USA?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <ReasonCard
                                 icon={faUserGraduate}
@@ -84,12 +85,17 @@ const StudyInUSA = () => {
                                 title="Internship and Job Opportunities"
                                 description="In the United States, there are plenty of internships and job prospects. These opportunities enable individuals to acquire hands-on experience while they are studying or after they graduate."
                             />
+                            <ReasonCard
+                                icon={faBookOpen}
+                                title="Holistic Academic Experience"
+                                description="The USA offers a flexible academic system, allowing students to explore diverse fields. Universities invest in state-of-the-art facilities and provide networking opportunities with professionals and alumni through events and career fairs."
+                            />
                         </div>
                     </div>
 
                     {/* Requirements */}
                     <div className="mb-10">
-                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Requirements for Admission</h2>
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">Requirements for Admission</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <RequirementCard
                                 title="For Prospective Undergraduate Students"
@@ -118,19 +124,29 @@ const StudyInUSA = () => {
 
                     <Accordion faqs={faqs} />
 
-                    <div className="text-left mb-10">
+                    <div className="text-left my-10">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4 text-left">The Global Pathfinders Edge</h2>
                         <p className="text-xl text-gray-600 mb-8">
-
-                            The college admissions journey can be overwhelming. Getting entry into top-tier institutions in countries like the US is no cake walk. That's where our expert advisors step in, playing a pivotal role in guiding students toward their dream universities. Learn more about our experts here
-<br />
-<br />
-                            We have a step-by-step strategic approach to college admissions and profile building. We empower students to stand out by providing personalized growth plans and weekly calls to keep them on track.
-<br />
-<br />
-                            By showcasing your child’s exceptional qualities across all application materials, we enhance their odds of securing coveted spots in top colleges around the globe. To get started, reach out to us today! We enroll only a limited number of children per cohort due to the personalized nature of our services.
-
+                            <PersonalStatementCard
+                                requirement="The college admissions journey can be overwhelming. Getting entry into top-tier institutions in countries like the US is no cake walk. That's where our expert advisors step in, playing a pivotal role in guiding students toward their dream universities. Learn more about our experts here"
+                            />
+                            <br />
+                            <PersonalStatementCard
+                                requirement="We have a step-by-step strategic approach to college admissions and profile building. We empower students to stand out by providing personalized growth plans and weekly calls to keep them on track."
+                            />
+                            <br />
+                            <PersonalStatementCard
+                                requirement="By showcasing your child’s exceptional qualities across all application materials, we enhance their odds of securing coveted spots in top colleges around the globe. To get started, reach out to us today! We enroll only a limited number of children per cohort due to the personalized nature of our services."
+                            />
                         </p>
                     </div>
+
+                    <a href='/contact' className='hover:no-underline'>
+                        <button className="mt-8 px-6 py-3 bg-blue-500 mx-auto text-gray-50 font-semibold rounded-md flex items-center hover:bg-blue-600 hover:text-white transition duration-300">
+                            Consult Now
+                            <FaCalendarAlt className="ml-2" />
+                        </button>
+                    </a>
                 </div>
             </div>
             <Logo />
@@ -161,6 +177,20 @@ const RequirementCard = ({ title, items }) => {
                 ))}
             </ul>
         </div>
+    );
+};
+
+const PersonalStatementCard = ({ requirement }) => {
+    return (
+        <>
+            <div className="bg-white shadow-lg rounded-lg p-6">
+                <div className="flex flex-row flex-wrap">
+
+                    <p className="text-gray-600 text-lg"><FaCircleCheck className='h-6 w-6 mr-2' style={{ float: "left" }} /> {requirement}</p>
+                </div>
+
+            </div>
+        </>
     );
 };
 
