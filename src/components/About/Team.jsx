@@ -35,7 +35,7 @@ const teamMembers = [
         name: "Rajiv Mehta",
         designation:"Co-Founder",
         linkedin:"https://www.linkedin.com/in/rajiv-mehta-7507bb27/",
-        description: "Rajiv is the CEO of Xtended Business Reporting LTD and brings substantial years of financial and entrepreneurial experience to the firm. He is passionate about mentoring and guiding students toward success.",
+        description: "Mr. Rajiv Mehta, the visionary founder of Global Pathfinders, brings a wealth of experience from his successful career in finance and entrepreneurship. As the founder of Xtended Business Reporting LTD and a seasoned investor across diverse sectors, Mr. Mehta's real-world expertise forms the backbone of our unique mentorship approach. At Global Pathfinders, Mr. Mehta goes beyond traditional counseling. He offers students unparalleled opportunities such as shadowing him in high-level business meetings, personalized internship placements through his extensive network, and hands-on guidance in developing and pitching startup ideas to real investors. This immersive mentorship transforms theoretical knowledge into practical skills, empowering students to navigate the complexities of the world with confidence and acumen.",
         photo: "/images/rajiv.jpg"
     },
     {
@@ -49,7 +49,7 @@ const teamMembers = [
         name: "Jiya Chawla",
         designation:"Head of Tech & Research",
         linkedin:"https://www.linkedin.com/in/jiyachawla/",
-        description: "Jiya is passionate about technology and loves mentoring students in this field. She brings research expertise to the organization and has previously been associated with institutions such as LSR and ISB.",
+        description: "Jiya is deeply passionate about technology and loves mentoring students in this field. With a strong commitment to sharing her knowledge and expertise, she guides the students to successful journeys in programming and development. Jiya brings a wealth of research expertise to the organization, having been associated with prestigious institutions such as Lady Shri Ram College (LSR) and the Indian School of Business (ISB). Her experience in these institutions has equipped her with a profound understanding of the technological landscape, which she leverages to drive innovation and excellence within the organization.",
         photo: "/images/jiya.jpg"
     }
 ];

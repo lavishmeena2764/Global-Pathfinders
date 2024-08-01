@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 'content4',
     name: 'Navya Sehgal',
-    uni: '',
+    uni: 'University of Illinois, Urbana Champaign',
     image: '/images/mentors/ns.jpg',
     title: 'Grateful for unwavering mentorship and support.',
     text1: "Thank you for everything, Shifali Ma'am. I couldn't be more grateful to have you as my mentor. I am incredibly thankful for everything you've done for me. Without your support, I'm sure I wouldn't have achieved even a fraction of what I have. ",
@@ -39,21 +39,39 @@ const testimonials = [
   },
   {
     id: 'content5',
+    name: 'Divyansh Agarwal',
+    uni: 'London School of Economics (LSE)',
+    image: '/images/mentors/da.jpg',
+    title: 'Transformative mentorship and application support',
+    text1: "Getting into LSE was a dream come true. Embarking on a journey with Global Pathfinders was truly joyous. Their meticulous approach towards personal growth, guided by Shifali ma'am's expertise and unwavering support, transformed challenges into milestones as I found an intricate balance between academics and extracurriculars. She focuses on the personal growth of the student to make him/her university ready.",
+    text2: "The support extended to crafting impactful SOPs and LORs added immense value, making the application process surprisingly relieving. I am wholeheartedly grateful for the dedication and diligence of my mentors at Global Pathfinders, who ensured my high school experience was transformative and one I'm proud of."
+  },
+  {
+    id: 'content6',
+    name: 'Madhav Sharma',
+    uni: 'University of British Columbia (UBC)',
+    image: '/images/mentors/ms.jpeg',
+    title: 'Exceptional support and expert guidance',
+    text1: "My experience with Global Pathfinders has been exceptional and they have gone above and beyond to help me achieve my goals. <br /><br />What sets Global Pathfinders apart is their dedication to their clients. They truly care about their students' success and work tirelessly to ensure that they achieve their goals. They are always available to answer any questions I had and offered unwavering support throughout the entire process.",
+    text2: "Additionally, Shifali ma’am has a wealth of knowledge about the college landscape and is always up-to-date with the latest trends and developments. Their advice and recommendations were spot-on and helped me make informed decisions about my future. <br /><br />I had consulted with more than 10 college counsellors, and I’m happy to say that I made the best decision to go with Global Pathfinders as I was able to get into my dream university!"
+  },
+  {
+    id: 'content7',
+    name: 'Ritwik Gupta',
+    uni: 'University of Edinburgh',
+    image: '/images/mentors/demo.jpg',
+    title: 'Exceptional mentorship and unwavering support.',
+    text1: "I am thrilled to recommend Shifali Mam for their exceptional mentorship and guidance throughout the application process. She has been an invaluable mentor and supporter, helping me navigate every turn with their extensive knowledge and unwavering dedication.<br /><br />From the very beginning, Shifali Mam displayed a genuine commitment to my success. They took the time to understand my goals and aspirations, tailoring their advice to suit my unique circumstances. Whether it was reviewing my application materials or providing constructive feedback, she consistently went above and beyond to ensure I was well-prepared.",
+    text2: "What truly sets Shifali Mam apart is their ability to inspire and instil confidence. Their patience, encouragement, and genuine belief in my abilities pushed me to strive for excellence. They provided insightful insights into the industry and offered valuable connections that proved instrumental in my journey. Not only that, she always motivated me to become self-reliant and self-independent in everything I did, and she was standing there to support me at every hurdle I encountered.<br /><br />I am grateful for the mentorship and guidance I received from Shifali Mam. Their expertise, kindness, and unwavering support have been instrumental in my success. I wholeheartedly recommend her to anyone seeking a mentor who is not only knowledgeable but also genuinely invested in helping others achieve their goals."
+  },
+  {
+    id: 'content8',
     name: 'Nishant Garg',
     uni: '',
     image: '/images/mentors/demo.jpg',
     title: 'Prompt and Proactive Counseling',
     text1: "My journey with Global Pathfinders was very good. The counselling part was done excellently. They are very prompt in their services and guide you at each step.",
     text2: "Shifali mam was very proactive in all the processes right from selection of the universities till the final stage. Hence Global Pathfinders is highly recommended to anyone planning to study in Canada."
-  },
-  {
-    id: 'content6',
-    name: 'Yash Agarwal',
-    uni: '',
-    image: '/images/mentors/demo.jpg',
-    title: 'Effective SAT and IELTS Preparation',
-    text1: "I studied for SAT and IELTS from Parminder mam. She's a wonderful teacher and because of her I was able to achieve a generous score of 1420 in SAT and 7.5 band in IELTS.",
-    text2: "Her teaching style is very simple and straight to the point, she's very patient and helpful. All the material provided by her was very relevant and helped me to understand the variety of questions being asked and how to approach them."
   },
   
 ];
@@ -100,8 +118,8 @@ const Testimonials = () => {
                   </svg>
                 ))}
               </div>
-              <p className="mt-4 text-gray-700">{testimonial.text1}</p>
-              <p className="mt-4 text-gray-700">{testimonial.text2}</p>
+              <p className="mt-4 text-gray-700" dangerouslySetInnerHTML={{__html:testimonial.text1}}></p>
+              <p className="mt-4 text-gray-700" dangerouslySetInnerHTML={{__html:testimonial.text2}}></p>
             </div>
           </div>
         ))}

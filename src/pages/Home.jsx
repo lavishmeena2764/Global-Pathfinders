@@ -2,6 +2,7 @@
 import React from 'react';
 import CarouselMain from '../components/CarouselMain';
 import VideoPlayer from '../components/VideoPlayer';
+import TestimonialSlider from '../components/Home/TestimonialSlider';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import Stats from '../components/Stats';
@@ -47,20 +48,20 @@ const Home = () => {
         </section>
 
         {/* Video testimonial section */}
-        <section className="py-5 bg-blue-500">
+        {/* <section className="py-5 bg-blue-500">
           <div className="container mx-auto px-6">
             <h2 className="text-5xl text-white font-bold text-center mb-16">Testimonials</h2>
 
             <div className='flex flex-row justify-evenly flex-wrap'>
               <div className='text-center m-2'>
-                <h1 className='text-2xl md:w-96 w-max-96 font-italic text-gray-200'>"They helped me craft my story and understand my real interest and passion, and now when I bring that to Hong Kong, I can network better I can meet with people better, and I am able to aggregate myself into a network that lends me a lot, and I recommend their service to everyone." <p className='text-right mt-2 text-xl'>~ Naman Tekriwal,<br />Hong Kong Technological University(HKUST)</p></h1>
+                <h1 className='text-2xl md:w-96 w-max-96 font-italic text-right text-gray-200'>"They helped me craft my story and understand my real interest and passion, and now when I bring that to Hong Kong, I can network better I can meet with people better, and I am able to aggregate myself into a network that lends me a lot, and I recommend their service to everyone." <p className='text-right mt-2 text-xl'>~ Naman Tekriwal,<br />Hong Kong Technological University(HKUST)</p></h1>
                 <a href="/testimonials"><button className='btn btn-light text-lg mt-4'>View All</button></a>
               </div>
               <VideoPlayer src="/videos/1.mp4" />
             </div>
           </div>
-        </section>
-
+        </section> */}
+        <TestimonialSlider />
         {/* Counselling Help */}
         <CounselingHelp services={services} head="How will Counselling Help" text="By syncing their personality, aptitude, and passion with their career path, Global Pathfinders can help align a student's strengths and interests with their college and course choices." />
 
@@ -94,15 +95,15 @@ const Home = () => {
 };
 
 const services = [
-  { icon: <AcademicCapIcon className="h-6 w-6 text-blue-500" />, title: "360 Career Counselling", description: "One on one college counselling" },
-  { icon: <BriefcaseIcon className="h-6 w-6 text-green-500" />, title: "University Selection", description: "Helping you choose the right university" },
-  { icon: <ClipboardListIcon className="h-6 w-6 text-red-500" />, title: "Profile Building", description: "Your Road Map/story" },
-  { icon: <DocumentTextIcon className="h-6 w-6 text-yellow-500" />, title: "SOPS | LORS | Resumes", description: "Assistance with essential documents" },
-  { icon: <CashIcon className="h-6 w-6 text-purple-500" />, title: "Scholarships Guidance", description: "Helping you secure scholarships" },
-  { icon: <ChatIcon className="h-6 w-6 text-indigo-500" />, title: "Interview Preparation", description: "Get ready for your interviews" },
-  { icon: <BellIcon className="h-6 w-6 text-pink-500" />, title: "Weekly Task Reminder", description: "For Students and Parents" },
-  { icon: <UserGroupIcon className="h-6 w-6 text-orange-500" />, title: "Future Career Guidance", description: "Explore career options" },
-  { icon: <ClipboardCheckIcon className="h-6 w-6 text-teal-500" />, title: "Full Application Assistance", description: "Help with editing and submitting College Applications (Common App)" },
+  { icon: <AcademicCapIcon className="mx-auto h-12 w-12  text-blue-500" />, title: "360 Career Counselling", description: "One on one college counselling" },
+  { icon: <BriefcaseIcon className="mx-auto h-12 w-12  text-green-500" />, title: "University Selection", description: "Helping you choose the right university" },
+  { icon: <ClipboardListIcon className="mx-auto h-12 w-12  text-red-500" />, title: "Profile Building", description: "Your Road Map/story" },
+  { icon: <DocumentTextIcon className="mx-auto h-12 w-12 text-yellow-500" />, title: "SOPS | LORS | Resumes", description: "Assistance with essential documents" },
+  { icon: <CashIcon className="mx-auto h-12 w-12 text-purple-500" />, title: "Scholarships Guidance", description: "Helping you secure scholarships" },
+  { icon: <ChatIcon className="mx-auto h-12 w-12 text-indigo-500" />, title: "Interview Preparation", description: "Get ready for your interviews" },
+  { icon: <BellIcon className="mx-auto h-12 w-12 text-pink-500" />, title: "Weekly Task Reminder", description: "For Students and Parents" },
+  { icon: <UserGroupIcon className="mx-auto h-12 w-12 text-orange-500" />, title: "Future Career Guidance", description: "Explore career options" },
+  { icon: <ClipboardCheckIcon className="mx-auto h-12 w-12 text-teal-500" />, title: "Full Application Assistance", description: "Help with editing and submitting College Applications (Common App)" },
 ];
 
 

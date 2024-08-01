@@ -24,8 +24,11 @@ import Home from './pages/Home';
 import StudyInSingapore from './pages/StudyInSingapore';
 import CallBackQueries from './pages/Admin/CallBackQueries';
 import StudyInUK from './pages/StudyInUK';
+import StudyInCanada from './pages/StudyInCanada';
 import StudyInUSA from './pages/StudyInUSA';
+import StudyInAustralia from './pages/StudyInAustralia';
 import PrivateRoute from './components/PrivateRoute';
+import StudyInEurope from './pages/StudyInEurope';
 function App() {
   return (
     <>
@@ -40,6 +43,9 @@ function App() {
         <Route path='/why-us' element={<WhyUs />} />
         <Route path='/study-in-singapore' element={<StudyInSingapore />} />
         <Route path='/study-in-uk' element={<StudyInUK />} />
+        <Route path='/study-in-aus' element={<StudyInAustralia />} />
+        <Route path='/study-in-europe' element={<StudyInEurope />} />
+        <Route path='/study-in-canada' element={<StudyInCanada />} />
         <Route path='/study-in-usa' element={<StudyInUSA />} />
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/programs/profile-building' element={<ProgramsPage title1={title1} programData1={programData1} c1={c1} head1={head1} />} />

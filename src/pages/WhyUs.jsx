@@ -16,7 +16,7 @@ const WhyUs = () => {
             <div className="container mx-auto p-8 pt-0"  style={{transform:"scale(0.95)"}}>
                 <div className="row gap-5 mb-24">
                     <div className="text col-lg-6">
-                        <h1 className="text-4xl font-bold mb-4 text-indigo-900">We are a trusted international Education consultancy.</h1>
+                        <h1 className="text-4xl font-bold mb-4 text-indigo-900">We are a Trusted International Education Consultancy.</h1>
                         <p className="text-lg text-gray-700">
                             The college admissions journey can be overwhelming and filled with uncertainty. Beyond grades and test scores, gaining entry into top-tier institutions can feel like a subjective maze. That's where our expert advisors step in, playing a pivotal role in guiding students toward their dream universities.
                         </p>

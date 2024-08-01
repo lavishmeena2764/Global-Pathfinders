@@ -11,6 +11,12 @@ const logos = [
     '/images/brand-logo/5.png',
     '/images/brand-logo/6.png',
     '/images/brand-logo/7.png',
+    '/images/brand-logo/8.png',
+    '/images/brand-logo/9.png',
+    '/images/brand-logo/10.png',
+    '/images/brand-logo/11.png',
+    '/images/brand-logo/12.png',
+    '/images/brand-logo/13.png',
 ];
 
 const Logo = () => {
@@ -57,7 +63,7 @@ const Logo = () => {
         {logos.map((logo, index) => (
           <div key={index} className="my-8">
             <div className="logo-wrapper">
-              <img src={logo} alt={`Logo ${index + 1}`} className="logo-image" />
+              <img src={logo} alt={`Logo ${index + 1}`} className="logo-image h-12" />
             </div>
           </div>
         ))}

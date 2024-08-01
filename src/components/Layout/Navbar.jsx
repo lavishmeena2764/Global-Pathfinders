@@ -40,6 +40,9 @@ const Navbar = () => {
         { id: 1, text: "Study in USA", url: "/study-in-usa" },
         { id: 2, text: "Study in Singapore", url: "/study-in-singapore" },
         { id: 3, text: "Study in UK", url: "/study-in-uk" },
+        { id: 4, text: "Study in Canada", url: "/study-in-canada" },
+        { id: 4, text: "Study in Australia", url: "/study-in-aus" },
+        { id: 4, text: "Study in Europe", url: "/study-in-europe" },
     ];
 
     const handleNav = () => {

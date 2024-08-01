@@ -44,19 +44,21 @@ const Blogs = () => {
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {currentBlogs.map((blog) => (
             <a href={`/blog/${blog.titleHash}`} key={blog.id} className="hover:no-underline">
-              <div className="group bg-white rounded shadow p-4 hover:scale-105 hover:duration-500">
+              <div className="group bg-white rounded shadow p-4 hover:scale-105 hover:duration-500 h-96 overflow-hidden"> {/* Fixed height for the card */}
                 <img
                   src={blog.img}
                   alt={blog.title}
-                  className="w-full object-cover rounded mb-4"
+                  className="w-full h-48 object-cover rounded mb-4" // Set a fixed height for images
                 />
-                <h2 className="text-2xl font-bold text-indigo-900 group-hover:text-blue-700">{blog.title}</h2>
+                <h2 className="text-2xl font-bold text-indigo-900 group-hover:text-blue-700 overflow-hidden text-ellipsis line-clamp-2">
+                  {blog.title}
+                </h2>
                 <p className="text-blue-500 mt-2">Read More...</p>
               </div>
             </a>
           ))}
         </div>
-        
+
         {/* Pagination Controls */}
         <div className="flex justify-center mt-8">
           {Array.from({ length: totalPages }, (_, index) => (

@@ -12,11 +12,10 @@ const CounselingHelp = (props) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {props.services.map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-4">
+              <div className="items-center mb-1 mx-auto">
                 {service.icon}
-                <h3 className="text-xl font-semibold text-gray-800 ml-4">{service.title}</h3>
-              </div>
-              <p className="text-gray-600">{service.description}</p>
+            </div>
+                <h3 className="text-xl font-semibold text-gray-800 mx-auto text-center">{service.title}</h3>
             </div>
           ))}
         </div>
