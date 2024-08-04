@@ -7,7 +7,7 @@ import VideoPlayer from '../VideoPlayer';
 const TestimonialSlider = (props) => {
   return (
     <div key={props.index} className="row flex flex-row justify-around">
-      <span className="col-md-4 text-right my-auto">
+      <span className="col-md-4 text-right my-auto mx-auto">
         <p className="text-xl md:text-2xl font-italic text-gray-200">
           "{props.testimonial.text}"
         </p>
@@ -16,7 +16,7 @@ const TestimonialSlider = (props) => {
           {props.testimonial.institution}
         </p>
       </span>
-      <span className="col-md-4 my-auto">
+      <span className="col-md-4 my-auto mx-auto">
         <VideoPlayer src={props.testimonial.videoSrc} />
       </span>
     </div>
